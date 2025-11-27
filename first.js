@@ -440,206 +440,255 @@
 // This is a impure function where it changes the outer values,
 // if you call hol() it shows 13
 
-// function outer() {
-//     let outerVar = "I'm in the outer scope!";
-//     function inner() {
-//         console.log(outerVar); 
-//     }
-//     return inner;  
-// }
-// const closure = outer(); 
-// closure();
-
-// when you call a function ,for Closure keep this ans function
-// name inside a variable, and call with that variable for an
-// answer, It give us the access to the variable which is written
-// above the return,this return has an function and it'll print
-// the variable 
 
 
-// function out(){
-//     let abc = "Alphabetical";
-//     function inn (){
-//      console.log(abc)
-//      }
-// return inn
-// }
 
-// let control = out();
-// control()
+// let are = ["apple", "mango", "fig", "munch" ];
+// let [a, ,b] = are;
+// console.log(a,b)  --> apple fig
 
-// control goes to out, out returns inn, inn is an function and it
-// prints abc which is a variable as ans 
-// when you call a function ,for Closure keep this ans function
-// name inside a variable, and call with that variable for an
-// answer, It give us the access to the variable which is written
-// above the return,this return has an function and it'll print
-// the variable 
+
+// Add mango at the end, Pineapple at the beginning of this array
+
+// let fruits = ["apple", "banana"];
+// fruits.push("mango"), fruits.unshift("Pineapple")
+// console.log(fruits) --> [ 'Pineapple', 'apple', 'banana',
+// 'mango' ]
+
+
+
+// let arr = [1,2,3];
+// let result = arr.reduce((ac, val) => ac + val)
+// console.log(result)
 
 
 
 
-
-// let op1 = 5;
-// let op2 =10;
-
-// function num(){
-//     return op1 + op2;
-// }
-// console.log(num())
+// let arr = [11,55,46,79,10,96,37];
+// let so = arr.sort(function(a,b) {
+//     return a-b;
+// });
+//  console.log(arr) --->Ascending Order
 
 
-// function abc(){
-//     let a = 10;
-// function def(){
-//     let b = 20;
-// function ghi(){
-//     let c = 30;
-// }    
-// }    
-// }
-// you can change a in abc all block, b in def, c in ghi 
-// b can't be accessed abc or outer , same to a b c as well, they
-// can be changed in their territory only
+// Replace banana with kivi
+// let fruits = ["apple", "banana"];
+// fruits.pop(), fruits.push("kiwi")
+// console.log(fruits)
 
 
-//IIFE
-
-// (function (){
-//     console.log("This is IIFE")
-// }) (); //---> This is IIFE
-
-// crate a function with no name function (){}, keep all this in
-// () bracket and call it by (), it'll pritn whatever is inide the
-// function 
+//Remove the last  in the array using method
+// let are = [1,2,3,4,5]
+// are.pop()
+// console.log(are)  --> [ 1, 2, 3, 4 ]
 
 
-// a()
+// let fruits = ["apple", "banana"];
+// fruits.pop(), fruits.push("kiwi")
+// console.log(fruits)
 
-// let a = function(){
-//     console.log("hello")
-// }
-
-//  Hoisting works in declaration but in expression, it won't,
-//  what expression means if you store  it inside a variable, it
-//  won't print, it shows, it was it can't access before
-//  initialization
-
-// a()
-
-// let a = function(){
-//     console.log("hello")
-// }
+// Insert Red and Blue at the index1 in the array
+// let colors = ["pink", "green", "yellow", "black", "white"];
+//  colors.splice(1,0,"red","blue" );
+// console.log(colors);
 
 
-// let ab = (m1, m2) =>{
-//     return m1 + m2;}
-// console.log(ab(20,30))
+// Extract only the middle 3 elements from this array
 
-// let som= (no1, no2)=>{
-//   return no1 + no2;
-// }
-// console.log(som(50,30)) ---> 80
+// let num = [1,2,3,4,5,6,7];
+// let nom = num.slice(2,5) 
+// console.log(nom) ---> [ 3, 4, 5 ]
 
-
-// function greet(name = "Guest"){
-//     console.log("Hello", name)
-    
-// }
-
-// greet( "Rohith")  --> Hello Rohith
+// console.log(num.slice(2,5)) --> [ 3, 4, 5 ]
 
 
-// let total = 0;
-// function getscore(...score){
-//   score.forEach((val)=>{
-//       total = total+ val;
-//   })
-// return total;
-// }
-// console.log(getscore(10,20,40,30,50))  --> 150
+// 11- Use .find() to get the first number less than 10
+
+// let num = [5,11,78,10,9,65,2];
+// let result = num.find((val)=>val>10 )
+// console.log(result)  --> 11
 
 
 
 
-// let sum = 0;
-// for(let i =1; i<101; i++){
-//     sum += i;       
-// }
-// console.log(sum)
+//12- Destructutre to get the first name and the last name
+
+// let num = ["Harsh", "Sharma"];
+// let [a,b] = num
+// console.log(a)  Harsh 
+// console.log(b)  Sharma 
 
 
 
 
 
-// function checkAge(age){
-//  if(age<18) return "Too young"
-// return "Allowed"
-// }
+// 13- Merge two Arrays using spread operator
 
-// console.log(checkAge(12))  ---> Too young
-// console.log(checkAge(18))  ---> Allowed
+// let a = [10,20,30];
+// let b = [50,79,65];
 
-
-// function nos(val){
-//     val();
-// }
-   
-// nos(function (){
-//     console.log("Hello")
-// }) ----> Hello
+// let c = [...a, ...b]
+// console.log(c) ---> [ 10, 20, 30, 50, 79, 65 ]
 
 
+//14- Add India to the start of this array using Spread
+// let countries = ["UK","Ireland","USA"];
+// countries = [...countries, "Italy" ];
+// console.log(countries) -->[ 'UK', 'Ireland', 'USA', 'Italy' ]
 
-// function kon(kya){
-//     console.log("Hello") 
-//     kya();
-// }
-// function kol(){
-//     console.log("Heyy") 
+// 15- Clone this Array properly (not by reference)
+// let arr1 = [10,20,30,40];
+// let arr2 = [...arr1];
+// console.log(arr2)
+
+
+// Clone by Reference
+
+// let arr1 = [10, 20, 30];
+// let arr2 = arr1;   // cloned by reference
+
+// arr2.push(40);
+
+// console.log(arr1); // [10, 20, 30, 40]
+// console.log(arr2); // [10, 20, 30, 40]
+
+
+
+
+// Clone using .slice()
+// let arr1 = [10, 20, 30];
+// let arr2 = arr1.slice();   // clone by value
+
+// arr2.push(40);
+
+// console.log("arr1:", arr1);   // [10, 20, 30]
+// console.log("arr2:", arr2);   // [10, 20, 30, 40]
+
+
+
+// Clone using Array.from -
+
+// let arr1 = [10, 20, 30];
+// let arr2 = Array.from(arr1);   // clone by value
+
+// arr2.push(50);
+
+// console.log("arr1:", arr1);   // [10, 20, 30]
+// console.log("arr2:", arr2);   // [10, 20, 30, 50]
+
+
+// Generate all rotations of an array
+
+
+// let arr = [1,2,3,4,5,6];
+// let store = [];
+
+// for (let i = 0; i < arr.length; i++) {
+//   store.push(Array.from(arr));  // store current rotation
+//   arr.push(arr.shift());        // rotate array
 // }
 
-// kon(kol)
+// console.log(store);
+
+// Answer
+// [
+//   [1, 2, 3, 4, 5, 6],
+//   [2, 3, 4, 5, 6, 1],
+//   [3, 4, 5, 6, 1, 2],
+//   [4, 5, 6, 1, 2, 3],
+//   [5, 6, 1, 2, 3, 4],
+//   [6, 1, 2, 3, 4, 5]
+// ]
 
 
+//create 2 arrays, keep 2nd array in the first array
 
-// function outer(){
-//     let count = 0;
-// return function(){
-//       count++ 
-//       console.log(count)
-// }    
+// let arr1 = [10,11,97];
+// let arr2 =[ 30,34,56];
+// arr1.push(arr2)
+// console.log(arr1)
+
+
+//Objects
+
+//To access the objects
+// let  role = "admin";
+// let obj ={
+//     name : "Harsh",
+//     age : 30,
+//     city : "Bhopal",
+//     [role] : "Jagan"
+// };
+// Object.entries(obj).forEach(function (val){
+//   console.log(val)  
+// })  
+// console.log(obj) // --> { name: 'Harsh', age: 30, city: 'Bhopal', admin: 'Jagan' }
+
+
+// let obj ={
+//     false : "Harsh",
+//     10: 30,
+// };
+// console.log(obj)  -->{ '10': 30, false: 'Harsh' }
+
+// const obj ={
+//     first_name : "Harsh"
 // }
+// obj2 = obj.first_name = "Karthick";
 
-// let double = outer();
-// double()  --> 1
-// double() ---> 2
-
-
-// function out(){
-//     let greet = "Hello All"
-// return function(){
-//         console.log(greet)
-//     }
-// }
-// let welcome = out();
-// welcome() --> Hello All
+// obj["first_name"] = "Mohan"
+// console.log(obj)
 
 
-//Write a BMI Calculator 
-
-function BMI(weight, height){
-    return weight / (height * height)
+let a = {
+    score : 90,
+    marks : "bad"
 }
-console.log(BMI(50,1.5).toFixed(2)) ---> 22.22
+let b = {...a}
+
+console.log(a)   { score: 90, marks: 'bad' }
+console.log(b)   { score: 90, marks: 'bad' }
+
+b.score = 100;
+
+console.log(a)  { score: 90, marks: 'bad' }
+console.log(b)  { score: 100, marks: 'bad' }
+
+// obj2 = Object.assign({},obj)
+
+// let obj ={
+//     name : "Harsh",
+//     age : 30,
+//     city : "Bhopal"
+// };
+
+// obj2 = Object.assign({Address : "Nagar"},obj)
+// {Address: 'Nagar', name: 'Harsh', age: 30, city: 'Bhopal'}
 
 
 
-function checkAge(age){
- if(age<18) return "Too young"
-return "Allowed"
-}
 
-console.log(checkAge(12))
 
+
+
+
+// Sort this array alphabetically and then reverse it
+
+// let names = ["Zain", "Balm", "Farz", "Karzz", "Alex" ]
+// names.sort(),names.reverse()
+// console.log(names) --> [ 'Zain', 'Karzz', 'Farz', 'Balm',
+// 'Alex' ]
+ 
+
+// Use map to square each number
+// let are = [10,20,3,4,50];
+// let result = are.map((val)=> val * val)
+// console.log(result) -->[ 100, 400, 9, 16, 2500 ]
+
+
+
+// Use filter to keep no.s greater than 10
+//  let are = [10,20,3,4,50,11];
+// let result = are.filter((val)=> val>10)
+// console.log(result) ---> [ 20, 50, 11 ]
 
