@@ -640,19 +640,6 @@
 // console.log(obj)
 
 
-let a = {
-    score : 90,
-    marks : "bad"
-}
-let b = {...a}
-
-console.log(a)   { score: 90, marks: 'bad' }
-console.log(b)   { score: 90, marks: 'bad' }
-
-b.score = 100;
-
-console.log(a)  { score: 90, marks: 'bad' }
-console.log(b)  { score: 100, marks: 'bad' }
 
 // obj2 = Object.assign({},obj)
 
