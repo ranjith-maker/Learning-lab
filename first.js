@@ -692,3 +692,118 @@ console.log(b)  { score: 100, marks: 'bad' }
 // let result = are.filter((val)=> val>10)
 // console.log(result) ---> [ 20, 50, 11 ]
 
+//GPT ans without Boolean as true or false
+
+// let password = "Hoga";
+// let attempts = 0;
+// const maxAttempts = 3;
+
+// while (attempts < maxAttempts) {
+//   const userInput = prompt("Enter password:");
+
+//   if (userInput === password) {
+//     console.log("Access granted!");
+//     break;
+//   }
+
+//   attempts++;
+//   console.log(`Wrong password. Attempts left: ${maxAttempts - attempts}`);
+// }
+
+// if (attempts === maxAttempts) {
+//   console.log("Account locked due to too many failed attempts.");
+// }
+
+
+// //Using Function 
+
+// function checkPassword(correctPass, maxAttempts) {
+//       let attempts = 0;
+
+//   while (attempts < maxAttempts) {
+//     let entered = prompt("Enter password:");
+
+//     if (entered === correctPass) {
+//       console.log("Access granted!");
+//       return;  // stop function
+//     }
+
+//     attempts++;
+//     console.log(`Wrong. Attempts left: ${maxAttempts - attempts}`);
+//   }
+
+//   console.log("Account locked.");
+// }
+
+// checkPassword("Hoga", 3);
+
+
+// let age = prompt("What is your age")
+
+// if (age === null){
+//     console.error(" You've cancelled it");
+// } else {
+//     if( age.trim() === "") {
+//         console.error(" Please write something..." )
+//     } else {
+//    age = Number(age);
+//   if (isNaN(age)) {
+//     console.error("Please enter a number...")
+//   }
+//  else {
+//     console.log(`your age is ${age}`)
+// }
+// }
+// }
+
+// 1st condition 
+// if (age === null){
+//     console.error(" You've cancelled it");
+
+// if the user pressed Cancel, it is null, we coded, age === null, print this
+
+// 2nd
+// else {
+//     if( age.trim() === "") {
+//         console.error(" Please write something..." )
+
+// if the user left only or wothout writing anything pressed OK, we can show this 
+// .trim() reduces useless spaces from first letter of the password to last letter eg-(    Rohith         ) 
+// or (          22    )
+
+// 3reduces   age = Number(age);
+//   if (isNaN(age)) {
+//     console.error("Please enter a number...")
+
+// when a user enters age in letters like twentytwo then it is NaN, so we coded this
+
+// 4th last case, he must have entered a Number, s console this 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
