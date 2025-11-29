@@ -767,30 +767,245 @@
 // 4th last case, he must have entered a Number, s console this 
 
 
+// let password = "Hoho";
+// let attempt = 0;
+// let maxAttempt = 3;
+
+// while( attempt < maxAttempt  ){
+//     let pass = prompt( "Word ???")
+// } if(pass === password){
+//     console.log("OK")
+//     break
+// }
+//      attempt++
+//      console.log(" wrong password")
+// if(  attempt === maxAttempt ){
+//     console.log("Acc Locked")
+// }
+
+
+
+// let word = prompt("What's your word?");
+// let count = 1;                   // we already asked once
+
+// while (word !== "Finish" && word !== null) {
+//   word = prompt("Try again:");
+//   count++;
+// }
+
+// if (word === "Finish") {
+//   console.log("You typed it right this time!");
+//   console.log("Total attempts:", count);
+// } else {
+//   console.log("You cancelled or closed the prompt. Attempts:", count);
+// }
+
+
+
+// let word;
+// let count = 0;
+
+// while(word !== "Finish"){
+//  word = prompt("whats your ?") 
+//      console.log("Try again")
+//     count++;
+//     if(word === "Finish"){
+// console.log("You typed right this time")
+// }
+// }
+//     console.log(count)
+
+
+
+
+// let word;
+// let count = 0;
+
+// while (word !== "Finish") {
+//   word = prompt("whats your ?");
+//   count++;
+
+//   if (word === "Finish") {
+//     console.log("You typed right this time");
+//   } else {
+//     console.log("Try again");
+//   }
+// }
+
+// console.log(count);
+
+
+// let tol;
+
+// while ( tol !== tol%2 === 0 ) {
+//  tol = prompt("Type even no.")  
+//  tol++ 
+
+//  if(tol === tol%2 ===0){
+//     console.log("We are Even bro!!")
+
+// } else {
+//     console.log("try again")
+
+// }}
+
+
+
+
+// let tol;
+
+// while (true) {
+//   tol = Number(prompt("Type even number:"));
+
+//   if (tol % 2 === 0) {
+//     console.log("We are even bro!!");
+//     break;  // stop loop
+//   } else {
+//     console.log("Try again");
+//   }
+// }
+
+
+
+// let num;
+// while(true){
+//     num = Number(prompt("Give me even no. bro?.."))
+//    if(num % 2 === 0){
+//     console.log("We're even bro")
+//     break;   
+// }
+// else{
+//     console.log("Try again")
+// }
+// }
+// Ans - 
+// Give me even no. bro?..12
+// We're even bro
+ 
+
+// let num; - we're gonna enter something in num so left with ;
+// while(true)  - this is wheta happen in our case, we dontt know when to stop But we know when it met with the even no, the if condition
+// You use while(true) when:
+// You don’t know how many times the loop should run,
+// BUT
+// You know the rule for when to stop.
+//  num = Number(prompt("Give me even no. bro?.."))   --> now we're defining what it should the prompt be, what will the suer see  
+// since we know when to stop, we should not try to hurry and write the if condition, after defining the prompt  
+//  if(num % 2 === 0){
+//     console.log("We're even bro")
+//     break;   ---> if(condition) if the statement is true then print this if it is correct then break, or else even if the user enetrs correct InputDeviceInfo, it'll keep looping.
+//  and we can use else element , there should ne no condition with else, if you want any new condition use else if or end with else.   
+
+
+
+// let tol;
+
+// while (true) {
+//   tol = prompt("Type even no.");
+  
+//   if (tol % 2 === 0) {
+//     console.log("We are Even bro!!");
+//     break;  // Stop when even number entered
+//   } else {
+//     console.log("try again");
+//   }
+// }
+
+
+// let count = 0;
+// for (let i = 1; i <= 20; i++) {
+//   if (i % 2 === 1) {
+//     console.log(i);   // Step 1: show the odd number
+//     count++;          // Step 2: count it
+//   }
+//   if (count === 3) break;
+// }
+
+
+
+// let count = 0;
+// for(let i = 1; i<21; i++){
+//     if(i%2 === 1){
+//         count++
+//         console.log(i)
+//     }
+// if(i === 5){
+//     break;
+// }}     
+
+
+
+// Print numbers divisible by 7, from 1 to 50 . Use % and Loop
+
+// for(let i = 1; i<51; i++){
+//     if(i%7 === 0)
+// console.log(i)
+// }
 
 
 
 
 
 
+// let balance = 1000, count = 0;
+
+// while(balance >= 0 && count++ < 3){
+//   let atm = +prompt("How much you want?");
+//   if(atm > balance) {
+//     console.log("Insufficient balance");
+//     break;
+//   }
+//   balance -= atm;
+// }
+
+// console.log(`Balance is ${balance}`);
 
 
 
 
+function atmMachine() {
+  let balance = 1000;
+  let attempts = 0;
+
+  while (attempts < 3) {
+    let amount = +prompt("Enter amount:");
+    attempts++;
+
+    if (amount > balance) {
+      console.log("Insufficient balance");
+      break;
+    }
+
+    balance -= amount;
+    console.log("Withdrawal successful:", amount);
+  }
+
+  console.log("Balance left:", balance);
+}
+
+atmMachine();
 
 
 
+function atm(){
 
+let balance = 1000;
+let attempt = 0;
 
+while( attempt < 3){
 
+let ask = +prompt("How much you want ?")
+attempt++;
 
-
-
-
-
-
-
-
-
+if(ask > balance ){
+  console.log("Insufficient balance")
+  break;
+}
+ balance-= ask;
+ console.log("Successful withdrawal", ask  )
+}
+console.log("Balance left", balance)
+}
+atm()
 
 
