@@ -408,604 +408,427 @@
     
 // })
 
-// Now the above fucntion has become a HOF, abc is called passed
-// the argument to the abc's parameter as another function,
-// now val has become another function, SO abc has become a HOF
-// ex - one who takes another work go higher, abc took a complete
-// function gave it to their own work so it is HOF 
 
-// function abc(val){
-//     return function (){
-//  console.log("Hello")       
-//     }
+
+
+
+
+
+
+// function add(...nums){
+//     let sum = 0;
+// nums.forEach(function(val){
+//   sum = val + sum
+// })
+//  console.log(sum)   
 // }
-// abc()()  -->Hello
+// add(10,20,30,40,50); ---> 150
+
+// foreach means loop right, it goes to checks, comes, tell you 
+// clearly, eg - add(10,20,30,40,50), 10 will go to ...nums,next 
+// line, it was about sum, so comes next line, nums go to val that
+// goes to val + sum, what is sum, 0, what is val 10  so 0+10 is
+// 10, so on every no. 2nd time sum is 10, val is 20, 10+20=30 
+// here we consoled sum not add, why because we want sum of all 
+// the arguments 
 
 
-// let a = 12;
-// function hal(){
-//     console.log("Hello")
+
+// function add(...nos){
+//     let sum = 0;
+// nos.forEach((val) => sum = sum + val)  
+//     console.log(sum);
 // }
-// hal()
-// this has done no changes to the outer a value so it is Pure
-// function
+// add(1,2,3)  --> 6 with arrow function
 
-// let a = 12;
-// function hol(){
-//     a++
-// console.log(a)
+
+
+// function add(...nos){
+//     let sum = 0;
+//     // The key change: Use sum = sum + val or sum += val
+//     nos.forEach((val) => sum = sum + val) 
     
+//     // Remove sum++ so the result is 6 (1+2+3)
+//     // sum++ 
+    
+//     console.log(sum); 
 // }
-// hol()
-// This is a impure function where it changes the outer values,
-// if you call hol() it shows 13
+// add(1,2,3) // Outputs 6
 
 
 
 
-// let are = ["apple", "mango", "fig", "munch" ];
-// let [a, ,b] = are;
-// console.log(a,b)  --> apple fig
+// function add(...nums){
+//     let sum = 0;
+// for(let i = 0; i<nums.length; i++){
+//     sum = sum + nums[i];
+// }
+//     console.log(sum)
+// }
+// add(1,2,3)  ---> 6 with for loop + function 
 
 
-// Add mango at the end, Pineapple at the beginning of this array
+// function add(...nums) {
+//     let sum = 0;
+    
+//     // The for loop iterates through the 'nums' array and adds each element to 'sum'
+//     for (let i = 0; i < nums.length; i++) {
+//         sum = sum + nums[i];
+//     }
+    
+//     // The sum is now 6 (1 + 2 + 3)
+//     console.log(sum); 
+// }
 
-// let fruits = ["apple", "banana"];
-// fruits.push("mango"), fruits.unshift("Pineapple")
-// console.log(fruits) --> [ 'Pineapple', 'apple', 'banana',
-// 'mango' ]
+// add(1, 2, 3); // Output: 6
+
+
+// Reduce 
+// When do we use this? To make a array a single value
+
+
+// function add(...nums){
+// let ans = nums.reduce(function(acc, val){
+//     return acc + val
+// },0)  
+// console.log(ans)
+// }
+// add(1,2,52);   ---> 55
 
 
 
-// let arr = [1,2,3];
-// let result = arr.reduce((ac, val) => ac + val)
+
+
+
+// function adit(...nums){
+// let sum = nums.reduce((acc,val)=> acc + val, 0); 
+//     console.log(sum)
+// } 
+// adit(10,20,30) --> 60, arrow function + reduce + sum 
+
+
+
+// Give a sum of these values = 15,79,56,43,80
+// use function + reduce to solve 
+
+
+// function add(...num){
+//     let ans = num.reduce((acc, val)=>acc+val, 0);
+//     console.log(ans);
+// } 
+
+// add(15,79,56,43,80);
+
+
+// let arr = [15,79,56,43,80];
+// let result = arr.reduce((acc, val) => acc + val, 0);
+// console.log(result)  --> 273
+
+// 5- Create an IIFE I run instantly
+
+// (function (){
+//     console.log("I run instantly")
+// })();   ----> 
+// I run instantly
+
+
+// 6- Make  a nested fucntion where the inner prints the variable
+// of outer one - this is called closure 
+
+// function saab(){
+// let a = "This is Closure";
+// function add (){
+//  console.log(a)
+// }
+//  return add
+// }
+
+// let sub = saab();
+// sub(); ---> This is Closure
+
+
+
+// function parent (){
+//     let a = 12;
+// function child (){
+//     console.log(a)
+// }
+//   child(); 
+// }
+// parent();   --->12
+
+// Instead of writing return we can call the child function with 
+// it's name 
+
+// Writing style
+// 1st step - write 1st func and variable 
+
+// function parent(){
+//     let a = 12;
+// }  
+
+// 2nd step - write 2nd func and console the variable
+
+// function parent(){
+//     let a = 12;
+    
+//     function child(){
+//         console.log(a)
+//     }
+// }  
+
+// 3rd step - calling both function 
+
+// function parent(){
+//     let a = 12;
+    
+//     function child(){
+//         console.log(a)
+//     }
+//     child();
+// }  
+// parent();  
+
+// let result = arr.reduce((acc, val) => acc + val,0);
+// console.log(result);
+
+
+// 6- Create an array of 5 fruits add one at the end, remove one
+//  from the beginning 
+// let fruits = ["banana", "berry", "nuts", "Apple"];
+// fruits.push("Mango");
+// fruits.shift()
+// console.log(fruits) 
+
+// 7- Use a for loop to print all elements of an array.
+
+// let arr = [10,20,30,40,50,60];
+// for(let i = 0; i<arr.length; i++){
+//     console.log(arr[i]);
+// }  ---> 10-60 got all elements
+
+
+//  let arr = [10,20,30,40,50,60];
+// for(let i = 1; i<arr.length; i++){
+//     console.log(arr[i]);
+// } --> 20-60 as you made i = 1, here 1st value is 20, 10is 0th.
+
+
+// 8- Create an object Person with keys, names, age, city and
+// print each key'd value 
+
+//Solving in for in loop
+// let person = {
+//     name : "Rohith",
+//     age : 15,
+//     city : "Madhapur"
+// }
+
+// for(let ui in person){
+//     console.log(person[ui])
+// }  --> Rohith, 15, Madhapur  Only values 
+
+// Solving in for in loop
+// let person = {
+//     name : "Rohith",
+//     age : 15,
+//     city : "Madhapur"
+// }
+
+// for(let ui in person){
+//     console.log(ui )
+// }  ---> name, age, city  Only keys
+
+
+// let out = Object.entries(person)
+// console.log(out)
+
+// Accesing the values always start with Object.vales(var name)
+
+
+
+//9- Use setTimeout() to log "Time up!" after 2 seconds 
+
+
+// setTimeout (function(){
+//     console.log("Times up!")
+// },2000)
+
+
+// writing format is 
+// 1st
+// setTimeout(function() {}, 2000 )
+// 2nd 
+setTimeout(function() {
+    console.log("Hogaya Sums ")
+}, 2000 )
+
+
+
+// 1- Write a High Order function runTwice(fun) that takes another
+// function and execute it two times.
+
+
+// function runTwice(fun){
+//     fun();
+//     fun();
+// }
+
+// runTwice(function () {
+// console.log("Hello all")    
+    
+// })  --> 
+// Hello all
+// Hello all    
+// Higher Order Function is something I need to work on a lot.....
+
+
+// 2- Create a one pure function that always returns the same
+// output for the given input, and impure function using a global 
+// value.
+
+
+// Pure Function 
+// function  pure(a,b){
+//     console.log(a+b)
+// }
+// pure(1,2) 3
+// pure(1,2) 3
+
+
+// Impure Function 
+// let global = 20;
+// function impure(a){
+//     global++
+//     console.log(a + global);
+// }
+// impure(5); --->   26
+// impure(10);  -->  32
+
+
+
+// 3- Write a function that uses object destructuring inside the 
+// parameter to extract and print name and age
+
+// function person(obj){
+//     console.log(obj) --> { name: 'Rohith', age: 20 }
+// }
+// person({name : "Rohith", age : 20})  
+
+// function person(obj){
+//     console.log(obj.name, obj.age)        ---> Rohith 20
+// }
+// person({name : "Rohith", age : 20})
+
+// function person ({name, age}){
+//     console.log(name,age)        ---> Rohith 56
+// }
+// person({name : "Rohith", age : 56})
+
+// you don't need to write obj.name obj.age all the time. this is 
+// what mentioned in the questiin as well object destructuring 
+// inside the parameter to extract and print name and age
+
+
+// 4- Demonstrate a differecne between normal function and arrow
+// function  when used as object methods (this issue)
+// His explanation is quite confusing and I'll return here 
+// watching Rohit's video
+
+// 5- Given an array of numbers use map to create a new array 
+// where each number is squared.
+
+// let arr = [10,15,20,25,30,35];
+// let result = arr.map((val)=> val * val); 
+// console.log(result)  --->  [ 100, 225, 400, 625, 900, 1225 ]
+
+
+// 6- Use reduce to find the total salary from an arrays of 
+// numbers. [1000, 2000, 3000]
+
+// let arr = [1000, 2000, 3000]
+// let result = arr.reduce((acc, val) => acc + val , 0)
+// console.log(result)  ---> 6000
+
+// let arr = [1000, 2000, 3000]
+// let result = arr.reduce( function (acc, val){
+//     return acc +  val;
+// },0)   
+// console.log(result)  //---> 6000
+
+// 7- Use filters to get only even numbers from an array
+
+// let are = [1,2,3,4,5,6,7,8,9,10,8,8,4];
+
+// let result = are.filter((val)=> val%2 === 0);
+
 // console.log(result)
-
-
-
-
-// let arr = [11,55,46,79,10,96,37];
-// let so = arr.sort(function(a,b) {
-//     return a-b;
-// });
-//  console.log(arr) --->Ascending Order
-
-
-// Replace banana with kivi
-// let fruits = ["apple", "banana"];
-// fruits.pop(), fruits.push("kiwi")
-// console.log(fruits)
-
-
-//Remove the last  in the array using method
-// let are = [1,2,3,4,5]
-// are.pop()
-// console.log(are)  --> [ 1, 2, 3, 4 ]
-
-
-// let fruits = ["apple", "banana"];
-// fruits.pop(), fruits.push("kiwi")
-// console.log(fruits)
-
-// Insert Red and Blue at the index1 in the array
-// let colors = ["pink", "green", "yellow", "black", "white"];
-//  colors.splice(1,0,"red","blue" );
-// console.log(colors);
-
-
-// Extract only the middle 3 elements from this array
-
-// let num = [1,2,3,4,5,6,7];
-// let nom = num.slice(2,5) 
-// console.log(nom) ---> [ 3, 4, 5 ]
-
-// console.log(num.slice(2,5)) --> [ 3, 4, 5 ]
-
-
-// 11- Use .find() to get the first number less than 10
-
-// let num = [5,11,78,10,9,65,2];
-// let result = num.find((val)=>val>10 )
-// console.log(result)  --> 11
-
-
-
-
-//12- Destructutre to get the first name and the last name
-
-// let num = ["Harsh", "Sharma"];
-// let [a,b] = num
-// console.log(a)  Harsh 
-// console.log(b)  Sharma 
-
-
-
-
-
-// 13- Merge two Arrays using spread operator
-
-// let a = [10,20,30];
-// let b = [50,79,65];
-
-// let c = [...a, ...b]
-// console.log(c) ---> [ 10, 20, 30, 50, 79, 65 ]
-
-
-//14- Add India to the start of this array using Spread
-// let countries = ["UK","Ireland","USA"];
-// countries = [...countries, "Italy" ];
-// console.log(countries) -->[ 'UK', 'Ireland', 'USA', 'Italy' ]
-
-// 15- Clone this Array properly (not by reference)
-// let arr1 = [10,20,30,40];
-// let arr2 = [...arr1];
-// console.log(arr2)
-
-
-// Clone by Reference
-
-// let arr1 = [10, 20, 30];
-// let arr2 = arr1;   // cloned by reference
-
-// arr2.push(40);
-
-// console.log(arr1); // [10, 20, 30, 40]
-// console.log(arr2); // [10, 20, 30, 40]
-
-
-
-
-// Clone using .slice()
-// let arr1 = [10, 20, 30];
-// let arr2 = arr1.slice();   // clone by value
-
-// arr2.push(40);
-
-// console.log("arr1:", arr1);   // [10, 20, 30]
-// console.log("arr2:", arr2);   // [10, 20, 30, 40]
-
-
-
-// Clone using Array.from -
-
-// let arr1 = [10, 20, 30];
-// let arr2 = Array.from(arr1);   // clone by value
-
-// arr2.push(50);
-
-// console.log("arr1:", arr1);   // [10, 20, 30]
-// console.log("arr2:", arr2);   // [10, 20, 30, 50]
-
-
-// Generate all rotations of an array
-
-
-// let arr = [1,2,3,4,5,6];
-// let store = [];
-
-// for (let i = 0; i < arr.length; i++) {
-//   store.push(Array.from(arr));  // store current rotation
-//   arr.push(arr.shift());        // rotate array
-// }
-
-// console.log(store);
-
-// Answer
 // [
-//   [1, 2, 3, 4, 5, 6],
-//   [2, 3, 4, 5, 6, 1],
-//   [3, 4, 5, 6, 1, 2],
-//   [4, 5, 6, 1, 2, 3],
-//   [5, 6, 1, 2, 3, 4],
-//   [6, 1, 2, 3, 4, 5]
+//   2, 4, 6, 8,
+//   10, 8, 8, 4
 // ]
 
 
-//create 2 arrays, keep 2nd array in the first array
+// 8- Create an arraay of names and use some () and every () to 
+// test a condition. eg- all names are longer than 3 characters 
 
-// let arr1 = [10,11,97];
-// let arr2 =[ 30,34,56];
-// arr1.push(arr2)
-// console.log(arr1)
+// Some - The some method of array instances returns true if it 
+// finds one element in that array that satisfies the provided 
+// testing function. Otherwise return false. 
+
+// let names = ["Ganesh", "Ali", "Tara", "India", "US"];
+// let result = names.some((val)=> val.length > 3);
+//  console.log(result) ---> true
+
+// let names = ["Ganesh", "Ali", "Tara", "India", "US"];
+// let result = names.some((val)=> val.length > 10);
+//  console.log(result) ---> false
 
 
-//Objects
+// 9- Create an Object user and test the behaviour of Object seal 
+// () and Object freeze by adding/changing keys
 
-//To access the objects
-// let  role = "admin";
-// let obj ={
-//     name : "Harsh",
+
+// let user = {
+//     name : "Rohith",
 //     age : 30,
-//     city : "Bhopal",
-//     [role] : "Jagan"
-// };
-// Object.entries(obj).forEach(function (val){
-//   console.log(val)  
-// })  
-// console.log(obj) // --> { name: 'Harsh', age: 30, city: 'Bhopal', admin: 'Jagan' }
-
-
-// let obj ={
-//     false : "Harsh",
-//     10: 30,
-// };
-// console.log(obj)  -->{ '10': 30, false: 'Harsh' }
-
-// const obj ={
-//     first_name : "Harsh"
+//     city : "Begumpet" 
 // }
-// obj2 = obj.first_name = "Karthick";
 
-// obj["first_name"] = "Mohan"
-// console.log(obj)
+// console.log(user) --> { name: 'Rohith', age: 30, city: 'Begumpet' }
 
-
-
-// obj2 = Object.assign({},obj)
-
-// let obj ={
-//     name : "Harsh",
+// let user = {
+//     name : "Rohith",
 //     age : 30,
-//     city : "Bhopal"
-// };
-
-// obj2 = Object.assign({Address : "Nagar"},obj)
-// {Address: 'Nagar', name: 'Harsh', age: 30, city: 'Bhopal'}
-
-
-
-
-
-
-
-
-// Sort this array alphabetically and then reverse it
-
-// let names = ["Zain", "Balm", "Farz", "Karzz", "Alex" ]
-// names.sort(),names.reverse()
-// console.log(names) --> [ 'Zain', 'Karzz', 'Farz', 'Balm',
-// 'Alex' ]
- 
-
-// Use map to square each number
-// let are = [10,20,3,4,50];
-// let result = are.map((val)=> val * val)
-// console.log(result) -->[ 100, 400, 9, 16, 2500 ]
-
-
-
-// Use filter to keep no.s greater than 10
-//  let are = [10,20,3,4,50,11];
-// let result = are.filter((val)=> val>10)
-// console.log(result) ---> [ 20, 50, 11 ]
-
-//GPT ans without Boolean as true or false
-
-// let password = "Hoga";
-// let attempts = 0;
-// const maxAttempts = 3;
-
-// while (attempts < maxAttempts) {
-//   const userInput = prompt("Enter password:");
-
-//   if (userInput === password) {
-//     console.log("Access granted!");
-//     break;
-//   }
-
-//   attempts++;
-//   console.log(`Wrong password. Attempts left: ${maxAttempts - attempts}`);
+//     city : "Begumpet" 
 // }
 
-// if (attempts === maxAttempts) {
-//   console.log("Account locked due to too many failed attempts.");
-// }
+// Object.seal (user)
+// user.name = "Rohan"
+// user.state = "TN"
 
+// console.log(user) --> { name: 'Rohan', age: 30, city: 'Begumpet' }
 
-// //Using Function 
+// with seal you can update the values with existing keys but
+// cannot add new things like this user.state = "TN"
 
-// function checkPassword(correctPass, maxAttempts) {
-//       let attempts = 0;
+// with freeze we can neither add or update the key- value pair 
 
-//   while (attempts < maxAttempts) {
-//     let entered = prompt("Enter password:");
+// 9- Create a nested Object (user -- address -- city) and access
+// the city name inside it. 
 
-//     if (entered === correctPass) {
-//       console.log("Access granted!");
-//       return;  // stop function
+// let obj = {
+//     user :{
+//         name : "Rohith",
+//         age : 20,
+//   adrress : {        
+//         city : "Mumbai"
 //     }
+// } }
 
-//     attempts++;
-//     console.log(`Wrong. Attempts left: ${maxAttempts - attempts}`);
-//   }
+// let arr = obj.user.address;
+// console.log(arr(obj.user.address)); 
 
-//   console.log("Account locked.");
-// }
 
-// checkPassword("Hoga", 3);
-
-
-// let age = prompt("What is your age")
-
-// if (age === null){
-//     console.error(" You've cancelled it");
-// } else {
-//     if( age.trim() === "") {
-//         console.error(" Please write something..." )
-//     } else {
-//    age = Number(age);
-//   if (isNaN(age)) {
-//     console.error("Please enter a number...")
-//   }
-//  else {
-//     console.log(`your age is ${age}`)
-// }
-// }
-// }
-
-// 1st condition 
-// if (age === null){
-//     console.error(" You've cancelled it");
-
-// if the user pressed Cancel, it is null, we coded, age === null, print this
-
-// 2nd
-// else {
-//     if( age.trim() === "") {
-//         console.error(" Please write something..." )
-
-// if the user left only or wothout writing anything pressed OK, we can show this 
-// .trim() reduces useless spaces from first letter of the password to last letter eg-(    Rohith         ) 
-// or (          22    )
-
-// 3reduces   age = Number(age);
-//   if (isNaN(age)) {
-//     console.error("Please enter a number...")
-
-// when a user enters age in letters like twentytwo then it is NaN, so we coded this
-
-// 4th last case, he must have entered a Number, s console this 
-
-
-// let password = "Hoho";
-// let attempt = 0;
-// let maxAttempt = 3;
-
-// while( attempt < maxAttempt  ){
-//     let pass = prompt( "Word ???")
-// } if(pass === password){
-//     console.log("OK")
-//     break
-// }
-//      attempt++
-//      console.log(" wrong password")
-// if(  attempt === maxAttempt ){
-//     console.log("Acc Locked")
-// }
-
-
-
-// let word = prompt("What's your word?");
-// let count = 1;                   // we already asked once
-
-// while (word !== "Finish" && word !== null) {
-//   word = prompt("Try again:");
-//   count++;
-// }
-
-// if (word === "Finish") {
-//   console.log("You typed it right this time!");
-//   console.log("Total attempts:", count);
-// } else {
-//   console.log("You cancelled or closed the prompt. Attempts:", count);
-// }
-
-
-
-// let word;
-// let count = 0;
-
-// while(word !== "Finish"){
-//  word = prompt("whats your ?") 
-//      console.log("Try again")
-//     count++;
-//     if(word === "Finish"){
-// console.log("You typed right this time")
-// }
-// }
-//     console.log(count)
-
-
-
-
-// let word;
-// let count = 0;
-
-// while (word !== "Finish") {
-//   word = prompt("whats your ?");
-//   count++;
-
-//   if (word === "Finish") {
-//     console.log("You typed right this time");
-//   } else {
-//     console.log("Try again");
-//   }
-// }
-
-// console.log(count);
-
-
-// let tol;
-
-// while ( tol !== tol%2 === 0 ) {
-//  tol = prompt("Type even no.")  
-//  tol++ 
-
-//  if(tol === tol%2 ===0){
-//     console.log("We are Even bro!!")
-
-// } else {
-//     console.log("try again")
-
-// }}
-
-
-
-
-// let tol;
-
-// while (true) {
-//   tol = Number(prompt("Type even number:"));
-
-//   if (tol % 2 === 0) {
-//     console.log("We are even bro!!");
-//     break;  // stop loop
-//   } else {
-//     console.log("Try again");
-//   }
-// }
-
-
-
-// let num;
-// while(true){
-//     num = Number(prompt("Give me even no. bro?.."))
-//    if(num % 2 === 0){
-//     console.log("We're even bro")
-//     break;   
-// }
-// else{
-//     console.log("Try again")
-// }
-// }
-// Ans - 
-// Give me even no. bro?..12
-// We're even bro
- 
-
-// let num; - we're gonna enter something in num so left with ;
-// while(true)  - this is wheta happen in our case, we dontt know when to stop But we know when it met with the even no, the if condition
-// You use while(true) when:
-// You don’t know how many times the loop should run,
-// BUT
-// You know the rule for when to stop.
-//  num = Number(prompt("Give me even no. bro?.."))   --> now we're defining what it should the prompt be, what will the suer see  
-// since we know when to stop, we should not try to hurry and write the if condition, after defining the prompt  
-//  if(num % 2 === 0){
-//     console.log("We're even bro")
-//     break;   ---> if(condition) if the statement is true then print this if it is correct then break, or else even if the user enetrs correct InputDeviceInfo, it'll keep looping.
-//  and we can use else element , there should ne no condition with else, if you want any new condition use else if or end with else.   
-
-
-
-// let tol;
-
-// while (true) {
-//   tol = prompt("Type even no.");
-  
-//   if (tol % 2 === 0) {
-//     console.log("We are Even bro!!");
-//     break;  // Stop when even number entered
-//   } else {
-//     console.log("try again");
-//   }
-// }
-
-
-// let count = 0;
-// for (let i = 1; i <= 20; i++) {
-//   if (i % 2 === 1) {
-//     console.log(i);   // Step 1: show the odd number
-//     count++;          // Step 2: count it
-//   }
-//   if (count === 3) break;
-// }
-
-
-
-// let count = 0;
-// for(let i = 1; i<21; i++){
-//     if(i%2 === 1){
-//         count++
-//         console.log(i)
-//     }
-// if(i === 5){
-//     break;
-// }}     
-
-
-
-// Print numbers divisible by 7, from 1 to 50 . Use % and Loop
-
-// for(let i = 1; i<51; i++){
-//     if(i%7 === 0)
-// console.log(i)
-// }
-
-
-
-
-
-
-// let balance = 1000, count = 0;
-
-// while(balance >= 0 && count++ < 3){
-//   let atm = +prompt("How much you want?");
-//   if(atm > balance) {
-//     console.log("Insufficient balance");
-//     break;
-//   }
-//   balance -= atm;
-// }
-
-// console.log(`Balance is ${balance}`);
-
-
-
-
-function atmMachine() {
-  let balance = 1000;
-  let attempts = 0;
-
-  while (attempts < 3) {
-    let amount = +prompt("Enter amount:");
-    attempts++;
-
-    if (amount > balance) {
-      console.log("Insufficient balance");
-      break;
-    }
-
-    balance -= amount;
-    console.log("Withdrawal successful:", amount);
-  }
-
-  console.log("Balance left:", balance);
-}
-
-atmMachine();
-
-
-
-function atm(){
-
-let balance = 1000;
-let attempt = 0;
-
-while( attempt < 3){
-
-let ask = +prompt("How much you want ?")
-attempt++;
-
-if(ask > balance ){
-  console.log("Insufficient balance")
-  break;
-}
- balance-= ask;
- console.log("Successful withdrawal", ask  )
-}
-console.log("Balance left", balance)
-}
-atm()
 
 
