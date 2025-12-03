@@ -678,11 +678,6 @@ let set2 = new Set([122,76,10,40,50,50]);
 // atm()
 
 
-
-
-
-
-
 // let age = prompt("Age kya?")
 //     if(age === null || age.trim() === ""){
 //         console.error("Write something Valid")    
@@ -753,36 +748,43 @@ let set2 = new Set([122,76,10,40,50,50]);
 // Agebro();
 
 
+// ------
 
-function Agebro() {
-  for (let attempt = 1; attempt <= 3; attempt++) {
-let age = prompt("Age is what?");
-if (age === null) return console.error("Cancelled");
+// function sayage() {
+//     for(let attempt =1; attempt <=3; attempt++){
+// let age = prompt("tell age? ");
+//     if(age === null) return console.error("You cancelled it")
 
-    age = age.trim();
-    let numAge = Number(age);
+//   let age = age.trim()
+//   let newAge = Number(age)
 
- if (!age || isNaN(numAge) || numAge <= 0) {
-      console.error("Enter positive number only.");
-} 
-  else {
-  console.log(`Your age is ${numAge}.`);
-  return;
- }
-    if (attempt === 3) {
-      console.log("Maximum attempts reached.");
-    }
-  }
-}
+//  if(!age || isNaN(newAge) || newAge <= 0){
+//     console.error("Write in number eg - 25")
+   
+// }
+//      else{
+//         console.log("Your age is", age)
+//          return;
+//      }
+//     if(attempt === 3){
+//         console.log("you maxed all 3 attempts")
+//     }
+// }}
 
-Agebro();
-
-
-
+// sayage();
 
 
 
+//  if (!age || isNaN(numAge) || numAge <= 0) {
+//       console.error("Enter positive number only.");
+// } 
 
+// Age is what? (just left blnk and left space, didn'ttype anything pressed enter, it gave this ans)
+// Enter positive number only.
+// Age is what?Two  (Typed in letters)
+// Enter positive number only.
+// Age is what?0 (wrote in negative or 0)
+// Enter positive number only.
+// Maximum attempts reached.
 
-
-
+// === Code Execution Successful ===
