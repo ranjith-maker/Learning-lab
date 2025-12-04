@@ -606,185 +606,76 @@ let set2 = new Set([122,76,10,40,50,50]);
 
 
 
-// 1- Exception handling in Age
 
-// let age = prompt("What is your age ?")
-// if( age === null || age.trim()=== "" ){
-//     console.log("please write something") 
-// } else{  age = Number(age)
-//     if(isNaN(age) {
-//         console.log("write in numerical term")
-//     }
-//     else {
-//         console.log(`your age is ${age}`)
-//     }
-// }
+// let pin = "Today"
+// let attempt = 0;
+// let maxattempt = 3;
+// while(attempt< maxattempt){
+//     let pass = prompt("Give password? ")
+// if(pass === pin){
+//     console.log("Access Granted")
+//     break;
+// } attempt++;
+//   console.log(`wrong, Attempt left = ${maxattempt - attempt}`)
+//  if(attempt === maxattempt){
+//         console.log("Account is locked")
+// }}
 
-// 9- ATM Simulator, Allow 3 withdrawals, Start with $1000.
-// Ask withdrawal amount 3 times.If enough balance print
-// --->deduct , else print ---> Insufficient balance
+// keep asking as lonas the user enters even no.
+
+
+// let num;
+// while(true){
+//     num = +prompt("What is no.")
+// if(num% 2 === 0){
+//     console.log("Okkkkk")
+//       break;
+// }    else {
+//     console.log("Try again")
+// }}
+
 
 
 // function atm() {
-//     let balance = 1000;
-//     let attempt = 0;
 
-// while (attempt < 3 && balance > 0) {
-//  let ask = prompt("How much you want ?"); 
-//       let numAsk = Number(ask);
+//   let balance = 1000;
+//   let count = 3;
 
-//  if (isNaN(numAsk) || numAsk <= 0 || ask.trim() === "") {
-// console.log("Invalid input. Please enter a positive number");
-//  attempt++;
-// } else if (numAsk > balance) {
-//      console.log("Insufficient balance");
-//    attempt++;
-// } else {
-//     balance -= numAsk;
-//    console.log("Successful withdrawal :", numAsk);
-//    if (balance === 0) {
-// console.log("Account is empty");
-//   break;
+//   while (balance > 0 && count > 0) {
+
+//     let ask = +prompt("How much do you want?");
+//     count--;
+
+//     if (ask > balance) {
+//       console.log("Insufficient balance");
+//       break;
+//     }
+
+//     balance -= ask;
+//     console.log("Successfully Withdrawn", ask);
+//   }
+
+//   console.log("Available balance", balance);
+
+//   if (count === 0) {
+//     console.log("Max attempts reached");
+//   }
 // }
-// }
-//  if (balance > 0) {
-//   console.log("Balance left :", balance);
-//  }
-// }
-// if (balance > 0 && attempt === 3) {
-//         console.log("Maximum withdrawal attempts reached.");
-// }
-// }
+
 // atm();
 
 
 
 
-// function atm(){
-// let balance = 1000;
-// let attempt = 0;
-// while( attempt < 3){
-// let ask = +prompt("How much you want ?")
-// attempt++;
-// if(ask > balance ){
-// console.log("Insufficient balance")
-// break;
-// }
-// balance-= ask;
-// console.log("Successful withdrawal :", ask )
-// }
-// console.log("Balance left :", balance)
-// }
-// atm()
-
-
-// let age = prompt("Age kya?")
-//     if(age === null || age.trim() === ""){
-//         console.error("Write something Valid")    
-//     }
-
-//  else age = Number(age)
-// if(isNaN(age)){
-//     console.error(" Write in Numerical form ")
-// }    else {
-//     console.log("Your age is", age)
-// }
-
-
-// ===============
-
-
-// function validateAgeWithAttempts() {
-//   for (let attempt = 1; attempt <= 3; attempt++) {
-
-//     let age = prompt("Age is what?");
-//     if (age === null) return console.error("Cancelled.");
-
-//     age = age.trim();
-//     let numAge = Number(age);
-
-//     if (!age || numAge <= 0) {
-//       console.error("Enter a positive number.");
-//     } 
-//     else if (isNaN(numAge)) {
-//       console.error("Age must be a number.");
-//     } 
-//     else {
-//       console.log(`Your age is ${numAge}`);
-//       return;
-//     }
-
-//     if (attempt === 3) console.log("Maximum attempts reached.");
-//   }
-// }
-// ===========================
 
 
 
-// function Agebro() {
-// for (let attempt = 1; attempt <= 3; attempt++) {
-//  let age = prompt("Age is what?");
-
-//  if (age === null) return console.error("Input cancelled.");
-
-//   let trimmedAge = age.trim();
-//    let numAge = Number(trimmedAge);
-
-//   if (!age || numAge <= 0) {
-//   console.error("Please enter a positive number.");  
-//  } 
-//  else if (isNaN(numAge)) {
-//   console.error("Age must be a number (e.g., 25).");  
-//   } 
-//  else {
-//   console.log(`Your age is ${numAge}.`);
-//  return; 
-//      }
-//         if (attempt === 3) {
-//              console.log("Maximum attempts reached.");
-//         }
-//     }
-// }  
-// Agebro();
-
-
-// ------
-
-// function sayage() {
-//     for(let attempt =1; attempt <=3; attempt++){
-// let age = prompt("tell age? ");
-//     if(age === null) return console.error("You cancelled it")
-
-//   let age = age.trim()
-//   let newAge = Number(age)
-
-//  if(!age || isNaN(newAge) || newAge <= 0){
-//     console.error("Write in number eg - 25")
-   
-// }
-//      else{
-//         console.log("Your age is", age)
-//          return;
-//      }
-//     if(attempt === 3){
-//         console.log("you maxed all 3 attempts")
-//     }
-// }}
-
-// sayage();
 
 
 
-//  if (!age || isNaN(numAge) || numAge <= 0) {
-//       console.error("Enter positive number only.");
-// } 
 
-// Age is what? (just left blnk and left space, didn'ttype anything pressed enter, it gave this ans)
-// Enter positive number only.
-// Age is what?Two  (Typed in letters)
-// Enter positive number only.
-// Age is what?0 (wrote in negative or 0)
-// Enter positive number only.
-// Maximum attempts reached.
 
-// === Code Execution Successful ===
+
+
+
+
