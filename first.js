@@ -1,681 +1,391 @@
+// OPERATORS
+
+// ✅ EASY LEVEL (10 Questions)
+// These check your fundamentals + operator understanding.
+// 1. What will be the output?
+// let x = 5;
+// x += 10;
+// console.log(x); 
+// Ans – 15
+
+// 2. Predict the output
+// let a = 10;
+// let b = "10";
+// console.log(a == b);
+// console.log(a === b);
+// True , False
+
+// 3. What will this print?
+// console.log(null == undefined);
+// console.log(null === undefined);
+// false , false 
+
+// 4. Output?
+// let a = 7;
+// let b = 3;
+// console.log(a > b && b < 10);
+// True True
 
-// Learning Loop
-// let i = 1;
-// while( i<6)
-// {
-// console.log(i)
-// i++
-// }
-//While Loop ---> start while(end) code change 
-// let i = 1;
-// while(i < 33) 
-// {
-//  console.log(i) 
-// i++
-// }
-
-
-// Real life scenerio question . let's say your you got all these fruits names in the backend 
-// how do you know how many times a particular fruit name has come 
-// final result will look like an object it means 
-// result = {
-//     orange : 3
-// }
- 
-// let fruits  = ["Orange", "Apple", "Pine","Apple","Orange"
-// ,"Mango", "Pine", "Banana", "Banana", "Orange", "Apple" ];
-
-// let result = fruits.reduce((acc, val) => {
-//        if(acc.hasOwnProperty(val))
-//         acc[val]++;
-//       else 
-//         acc[val] = 1;
-//      return acc;   
-// },{})
-
-// console.log(result)
-// { Orange: 3, Apple: 3, Pine: 2, Mango: 1, Banana: 2 }
-
-// for acc we write one 0 right that is initializer, here instead of that 0  we keep the curly bracesopned
-// 1st Step 
-// let result = fruits.reduce((acc, val) => {
-       
-// },{})
-
-// val gets all the fruits value, acc has none 
-//  if(acc.hasOwnProperty(val)) - Checks if this fruit name already exists in the box
-// First time you see “Orange”? NO key exists
-// Second time you see “Orange”? Key exists if yes then add 
-//  acc[val]++;  if not acc[val] =1 -  If fruit does NOT exist → add it with count 1
-
-
-
-// Same with Groups 
-// let fruits = ["Orange", "Apple", "Pine", "Apple", "Orange",
-// "Mango", "Pine", "Banana", "Banana", "Orange", "Apple" ];
-
-// let groups = Object.groupBy(fruits, fruit => fruit);
-
-// let result = {};
-// for (let key in groups) {
-//   result[key] = groups[key].length;
-// }
-
-// console.log(result);
-
-// { Orange: 3, Apple: 3, Pine: 2, Mango: 1, Banana: 2 }
-
-
-
-// let obj ={
-//     name : "Rohith",
-//     age : 20
-// }
-// console.log(obj.hasOwnProperty("name")) - true 
-// how to know  whether obj has a key called name ?
-// if the key is present then it'll show in true or false way 
-// console.log(obj.hasOwnProperty("name")) 
-// inside obj, name, age are properties right ? we are checking  whether obj has it or not 
-
-// let fruits = ["Orange", "Apple", "Pine", "Apple", "Orange",
-// "Mango", "Pine", "Banana", "Banana", "Orange", "Apple" ];
-
-// let result = fruits.reduce((acc,val) =>{
-//     acc.hasOwnPropert(val) ? acc[val]++ : acc[val] = 1;
-//     return acc;
-// },{} )
-
-// console.log(result);
-
-
-// let fruits = ["Orange", "Apple", "Pine", "Apple", "Orange",
-// "Mango", "Pine", "Banana", "Banana", "Orange", "Apple" ];
-
-// let result = {};
-
-// for (let key of fruits) {
-//   if (result[key]) {
-//     result[key]++;
-//   } else {
-//     result[key] = 1;
-//   }
-// }
-
-// console.log(result);
-
-
-// In an array we can write duplicate values like this 
-// let arr = [10,20,30,10,10,40,40,30,]
-// set stores only unique values, how to make set
-
-// let sat = new Set(); ---> to initialize it open [],put the values inside 
-
-// let sat = new Set();
-// sat.add("Rohit")
-// sat.add(30)
-// sat.add("30")
-// sat.add(22)
-
-// sat.delete(22)
-
-// console.log(sat)
-
-
-// Instagram IDs 
-
-// const user_id = new Set(["rohit_negi9", "Mohith_91", "Virat_009", "Kohli_97"])
-// let new_user =  "rohit_negi9"
-// //To check we can use the same username or not, 
-// console.log(user_id.has(new_user))
-
-// How to convert this array into Set
-// let arr = [10,20,30,10,10,40,40,30];
-// let sat = new Set(arr);
-// console.log(sat);  ---> Set(4) { 10, 20, 30, 40 }
-
-// Union of Set
-
-// let set1 = new Set([10,20,30,10,10,40,40,30,]);
-// let set2 = new Set([122,76,10,656,50]);
-// let set3 = new Set([...set1, ...set2]);
-// console.log(set3);  ---> Set(8) { 10, 20, 30, 40, 122, 76, 656, 50 }
-
-// Now to check whether set2 has similar values as set1 like insta ID 
-// we can use Filter, we can filter only array right ? we know how to convert into array by using spread operator [...arr]
-
-
-
-let set1 = new Set([10,20,30,10,50,40,40,30,]);
-let set2 = new Set([122,76,10,40,50,50]);
-// convert a set1 into array and filter it
-// let result = [...set1].filter((val) => set2.has(val))
-// console.log(result)  --> [ 10, 50, 40 ]
-
-// here, set1 value goes to val and checks set2 has any set1
-// values and printing with result as similar values in both 
-
-
-// Iterate over set - For of and ForEach loop
-
-// let set1 = new Set([10,20,30,10,50,40,40,30,]);
-// let set2 = new Set([122,76,10,40,50,50]);
-
-// for(let key of set1){
-//     console.log(key)
-// } --> 10 20 30 50 40 
-
-// let result = set2.forEach((val)=> console.log(val))
-// 122 76 10 40 50 
-
-// It stores in key-value pair - "KEY" should be unique 
-
-// let map1 = new Map();
-// map1.set(3,90 )
-// map1.set("Rohith", 23)
-// map1.set("Power", 20)
-// console.log(map1)  --> Map(3) { 3 => 90, 'Rohith' => 23, 'Power' => 20 }
-
-//  let map1 = new Map(); map1.set() - this is how we add properties for Map 
-
-
-
-// let map1 = new Map();
-// map1.set(3,90 )
-// map1.set("Rohith", 23)
-// map1.set("Power", 20)
-// map1.set("Rohith", 40)
-
-// console.log(map1) Map(3) { 3 => 90, 'Rohith' => 40, 'Power' => 20 }
-// if we use same key again, it wil just update it 
-
-
-// let map1 = new Map([[4,"Odin project"], ["Movie","Life of Pi"], ["Doubt","Chatgpt"]]);
-
-// for(let [key,value] of map1){
-//     console.log(key,value)
-// }
-// ans - 
-// 4 Odin project
-// Movie Life of Pi
-// Doubt Chatgpt
-
-
-// THIS KEYWORD
-
-// Everything in JS revolves around Object
-
-// Global Object 
-// how JS know that when we type console.log() and prints whatever is inside how Math.random()knows it ot generate a Node. 
-// The global object name is Window, means we can write window.Math.random() like accessing MAth with window 
-// Chrome = window , Node = global
-// what is globalthis - It pounts the global object
-
-
-
-// The this keyword in JavaScript is a special keyword that refers to 
-// the context in which the current code is being executed. 
-// Its value depends on how the function where this is used is called.
-
-// // 2:Inside a Function 
-// // i: (Non-Strict Mode)
-// // When this is used inside a regular function, it refers to the global object.
-
-// function greet(){
-//     console.log(this);
-// }
-
-// greet();  and go to console in browser the window will show 
-
-// when write "use strict"
-// it won't run as per new version, for ex- 
-
-// a = 10;
-// console.log(a) --> it gives 10 as an answer
-
-
-// "use strict"
-// a = 10;
-// console.log(a) --> it'll give error as to define the a first
-
-
-// 3: Inside a Method (Object Context)
-// When this is used inside an object’s method, it refers to the object that owns the method.
-
-// let obj ={
-//     name : "Rohith",
-//     age : 25,
-//    greet : function (){
-//         console.log(this);
-//     }
-// }
-// obj.greet();  --> { name: 'Rohith', age: 25, greet: [Function: greet] }
-
-
-// Arrow functions don’t have their own this. 
-// Instead, they inherit this from the surrounding (lexical) scope.
-
-// let obj = {
-//     name:"rohit",
-//     age:11,
-//     greet: ()=>{
-//         console.log(this);
-//     }
-// }
-
-// obj.greet();
-
-
-
-
-// let obj = {
-//     name : "Rohit",
-//     city :"Tokyo",
-//     age :20,
-//   greet : function (){
-//       let ab = ()=>{
-//           console.log(this )
-// }
-//       ab();
-//   }}
-
-// obj.greet();  --> { name: 'Rohit', city: 'Tokyo', age: 20, greet: [Function: greet] }
-
-
-// when we use this keyword in arrow function, it takes a lexical scope here that is obj right ?
-
-// You are absolutely correct that the issue lies with how the this keyword works inside arrow functions
-//  and that it uses lexical scope. However, the object whose scope is captured is not obj itself, 
-//  but the scope surrounding the greet function.
-
-
-
-// Inside a Constructor or Class
-// In constructors and classes, this refers to the instance of the object being created
-
-// class Person{
-//     constructor(name,age){
-//         this.name = name;
-//         this.age = age;
-//     }
-// }
-
-// let a = new Person("Rohit", 20);
-// console.log(a); --->  Person { name: 'Rohit', age: 20 }
-
-
-
-// Explain THIS keyword for arrow fun and normal fun without using Object 
-
-
-// let greet = ()=>{
-//     console.log(this)
-// }
-// THIS with Arrow function inherit the global scope, so this will point out Window 
-
-// let meet = function(){
-//     console.log(this);
-// }
-
-// meet();  this will also point out Window only as it is GLobal 
-
-
-// var meet = function () {
-//     console.log(this)
-// }
-
-// window.meet();
-// VM829:2 Window {0: Window, window: Window, self: Window, document: document, name: '', location: Location, …}
-// Because let and const isn't a global where as Var is global .
-
-
-// How JS Works 
-// JS is a Synchronous Single threaded language
-
-// Code will be executed one line by one line 
-// Synchronized means one by one 
-// thats why let a = 10; written in 11 line, you wrote console.log(a) in 10th line 
-// so when it reads the 10th line "a" wasn't initialized,  it was initialised in 11th line 
-
-
-// Hoisting 
-// Hoisting in JS is the behaviour where variable and function declarations
-//  are moved to the top of their containing scope during the compiling scope, before the code has been executed. 
-
-// whatever we declare in var let const  it'll into the top 
-
-
-// let z;
-// var x; 
-// let y;
-
-// console.log(x)
-// let z = 30;
-// console.log(y)
-// var x = 20;
+// 5. Ternary operator
+// Write a ternary expression that prints "Adult" if age ≥ 18 else "Minor".
+// let age = 14;
+// let status = age >= 18 ? "Adult" : "Minor"
+// console.log(status)  - Minor
+
+// 6. What is the result?
+// let n = 20;
+// console.log(!(n > 10));
+// false  
+
+// 7. Output?
+// console.log(typeof null);
+// Object 
+
+// 8. Output?
+// let value = "30";
+// console.log(value == 30); Ans - true
+// why it is true 30 is a string right ? 
+
+// In JS if it is a numberin string, it'll convert it into a number, but it is  not the same with words it will  show NaN 
+
+// 9. Output?
+// console.log(NaN == NaN);
+// false
+
+//  10. Rewrite using +=
+// let total = 50;
+// total = total + 25;
+//  Ans - total+= 25 
+// console.log(total) = 75
+
+
+// ✅ MEDIUM LEVEL (10 Questions)
+// These test understanding of coercion, increments, chaining, and tricky comparisons.
+// 1. Predict the output
+// let a = 1;
+// let b = 2;
+// let result = --b - ++a + ++b - --a;
+// console.log(result);  ---> 0
+// // 1 - 2 + 2 - 1
+// // = 0
+
+// 2. What is logged?
+// let x = "5";
+// let y = 2;
+// console.log(x * y); 10
+// console.log(x + y); 52
+
+
+// 3. Output?
+// let a = 0;
+// console.log(a || 100);    - 100
+// console.log(a && 100);  - 0
+
+
+
+// let a = 105;
+// console.log(a || 100); ---> 105
+// console.log(a && 0); ---> 0
+
+// let a = 105;
+// console.log(a || 100);  --> 105
+// console.log(a && 100);  ---> 100
+
+// The || operator looks for the first truthy value.
+
+// The && operator looks for the first falsy value. If all values are truthy, it returns the last value.
+
+// 4. Evaluate
+// console.log(null >= 0);  -True 
+// console.log(null > 0);   - False
+
+// console.log(null > 0);   false
+// console.log(null < 0);  false
+// console.log(null === 0)   false
+
+// if Null is not less than and higher than 0 and equal to zero all three is false then waht is true
+
+// Code,Coercion,Result
+// null > 0,0 > 0,false
+// null < 0,0 < 0,false
+// null >= 0,0 >= 0,true (Because 0 is equal to 0)
+// null <= 0,0 <= 0,true (Because 0 is equal to 0)
+
+// when comparing Null with relational operators like <> null becomes 0 that's why 0 is not higher than and less than 0 is True 
+// when comparing Null with equal operators like = 
+
+// Strict Equality (===)
+// console.log(null === 0); // false
+
+// The strict equality operator (===) checks both value and type. Since null is of type object (historically) and 0 is of type number, they are of different types, so this is always false.
+
+// Loose Equality (==)
+// console.log(null == 0); // false
+
+// This is the most confusing part. While null coerces to 0 for relational operators, the loose equality (==) has a specific, hard-coded rule: null is only loosely equal to undefined. It is not equal to 0 or any other number.
+
+// typeof undefined - 'undefined'
+// typeof null - 'object'
+// null == undefined - true
+// null === undefined - false
+
+// 5. Output?
+// console.log(undefined == 0);  false
+// console.log(undefined === 0); false
+// console.log(undefined >= 0);  false
+// console.log(undefined < 0);   false 
+// console.log(undefined > 0);   false
+
+
+// 6. Solve
+// let a = 10;
+// let b = "20";
+// let c = a == b == false;
+// console.log(c);
+// Ans  ---> true
+
+// 7. Output
+// console.log("5" - 1);  4
+// console.log("5" + 1);  51
+// console.log("5" * "2"); 10
+// console.log("5" / 2); 2.5
+
+// 8. Output?
+// let x = 3;
+// console.log(x++ + ++x + x--);  ---> 13
+// 3 + 5 + 5 = 13
+// 4 + 5 + 
+// ----------------------
+// x = 11;
+// console.log(x--) --> 11 bcoz after minus stays the same value 
+// ----------------------
 // let y = 10;
-// console.log(z)
+// console.log(y++ + (y * 2) + --y + y + "1");
+// 10 + 22 + 10 + 10+ "1"
+// 11 + 22 + 10 + 
+// so here what we need to note mainly is (y*2) is last y value is 11, so 100 * 2 = 22
+// after that --y is we should not take bracket value 22 to substitute with --y as 21 we should take 11 as last value and  sub with y so 10 
+// -----------------
+// 9. Ternary
+// Rewrite this as a ternary:
+// if(score > 40){
+//     status = "Passed"
+// } else {
+//     status = "Failed"
+// // }
+// let score;
+// let grade = score > 40 ? "Passed" : "failed";  
 
-// JS takes all the code and wherever we declare the variable carry it to the top, like let z;  only declaration goes up not the value 
-// all the declaration goes up 
+// console.log(grade); ---> failed
+// I didn't define score with anything as 10 or 20,
+// it should show undefined right ? why it shows failed?
+
+// You are correct that you did not define score with a value, so when the line let score; runs,
+// the variable score is initialized to undefined.
+
+// However, the final output is failed, not undefined, because of how JavaScript handles the 
+// comparison (>) between undefined and a number (40).
+
+// That is a very insightful question about how JavaScript handles uninitialized variables during comparisons!
+
+// 🧐 Why the Output is "failed"
+// When JavaScript evaluates the conditional expression, it follows these steps:
 
 
+// 1. Coercion of undefined
+// When you use a relational operator (>, <, >=, <=) to compare a variable to a number, JavaScript attempts to convert the non-numeric value into a number.
+
+// When undefined is converted to a number, it becomes the special value NaN (Not a Number).
+
+// 2. Comparison with NaN
+// The expression effectively becomes: NaN > 40 failed 0 --> false --> failed
+// It's worth noting that if you had initialized score to null, the result would also be "failed", but for a different reason:
+
+// let score = null; // Coerced to 0
+// let grade = score > 40 ? "Passed" : "failed";
+
+// // 0 > 40 is false, so the output is "failed"
 
 
+// 10. Logical Operator Question
 
-// function DayName(date = new Date()) {
-// const days = [
-// "Sunday", "Monday", "Tuesday",
-// "Wednesday", "Thursday",
-// "Friday", "Saturday"
-// ];
-// return days [date.getDay()];
+// let age = 20;
+// let hasID = false;
+
+// if(age >= 18 && hasID){
+//     console.log("Allow Entry")
+// } else {
+//     console.log("Reject")
 // }
-// console.log(DayName()); ----> Saturday
-// console.log(DayName(new Date("2025-11-25"))); ----> Sunday
-// console.log(DayName(new Date("2025-12-01"))); ----> Monday
+// //What prints? Why?
+// Reject because && both condition should met to get true, here 1st one is false as 20 is not equal to 18 
+// hasID's value itself is false only, so here true. so false true is false thats why, else is printed. 
+// ________________________________________
+// ✅ HARD LEVEL (10 Questions)
+// These simulate real product-company logic traps + operator puzzles.
+// 1. Predict the output carefully
+// let i = 23;
+// let j = 67;
+// let k = i-- - i++ + --j - ++j + --i - j-- + ++i - j++;
+// console.log(k);  -88 
+
+// 23 - 22 + 66 - 67 + 22 - 67 + 23 - 66  = -88
+
+// 22 - 23 + 66 - 67 + 22 - 66 + 23 - 66 
+
+// 2. Operator Precedence Challenge
+// let x = 4;
+// let y = 8;
+// let z = x++ * --y + ++x / y-- + x;
+// console.log(z) - 34.85
+// 4 * 7 + 6 / 7 + 6 = 34.85
+// 5 * 7 +6 /7 + 4 =
+// let a = 5;
+// let b = 1;
+
+// let result = ++a * "2" - b-- || (a + b);
+
+// console.log(result); = 11
+
+// 6 * 2 - 1 = 11 
+// 6 * 2 - 0 =          , a+b = 6(a) + 0(b) = 6 
+
+// Evaluation of the || Operator
+// The expression is now: 11 || (a + b)
+
+// The || (OR) operator looks for the first truthy value.
+
+// The left side is 11, which is a truthy value.
+
+// JavaScript immediately short-circuits and returns the value 11
+// without evaluating the right side ((a + b)).
+// -----
+
+// 3. Trick with == and ===
+// console.log([] == []);  
+// console.log([] == ![]);
+
+// console.log([] == []);   ---> false  
+// console.log([] === []);  ---> false
+// we may think empty array and empty array is true right ? but JS logic is best, here 2 empty boxes are not equal
+// why because it compares the reference IDNo. not the value only value can be empty
+// if Localdisk D and Localdisk E is empty does that mean they are same, no right, both has different address path
+
+// console.log([] == ![]);   //---> true 
+// console.log([] === ![]);  --false 
 
+// console.log([] == ![]);   //---> true 
+// so here empty array => string "" => empty string it to 0 and ![] => falsy => 0
+// so 0 == 0 = true, ans is True.
+
+// console.log([] === ![]);  --- false 
+// triple equal is a strict operator, it checks the type as well as value
+// here it compares the logic []---> array and ![]---> it is boolean
+// since array can not be equal to boolean it is False
+
+
+// 4. Deep coercion
+// console.log(null == 0);  - false 
+// console.log(null <= 0);  - true
+// console.log(null >= 0);  - true
+
+
+// 5. Shadow question
+// let a = "10";
+// let b = a++ + ++a + a;
+// console.log(b); - 34
+// 10 + 12 + 12 = 34 
+// 11 + 12 + 12
+// why it isn't 22a ?  why means first JS converts the string of "10" into the number 10 
+// at last a value is previously converted to 12 by operation it is 12 so added 
+
+// 6. Nested ternary
+// What is the output?
+// let marks = 72;
+// let grade = marks > 90 ? "A" : 
+//             marks > 75 ? "B" :
+//             marks > 60 ? "C" : "D";
+// console.log(grade); C  as 72 is higher than 60
+
+// 7. AND / OR short-circuit
+
+// console.log(0 && 5); 0
+// console.log(5 && 0); 0
+// console.log(0 || 5); 5
+// console.log(5 || 0); 5
+
+// && AND always look for first falsy value and returns the value as ans never checks another value
+// || OR  always look for first truthy value and returns the value as ans never checks another value
+
+// 1. console.log(" " && !1); The output is false 
+// because the string with a space (" ") is truthy, forcing the && operator to evaluate the second operand,
+// which is strictly false.
 
-// If, else if, else if, else
-// if(12>13){
-// console.log("if ran");
-// } else if(14>15){
-// console.log("else if ran");
-// } else if(16>18){
-// console.log("else if 2 ran");
-// } else
-// console.log("else ran");
-//Here if and else if had condition, else didn't have one. You shouldn't give a condition to last value
+// "" --> this is empty string " " --> this is nonempty string and non empty string is truthy 
+// and 1 is truthy here !1 is false so truthy + false = false
 
+// 2.console.log(" " && !0); ---> true
 
-// 50 > 40 ? console.log("hello") : console.log("HOooo");
+// here since " " is truthy and 0 is false so not equal to 0 is !0 is truthy 
+// true + true = true
 
+// 8. Pre/Post with booleans
+// let x = true; 
+// let y = x++ + ++x;
+// console.log(y);
 
-// let a = 5
-// switch(a){
-// case 1
-//     console.log("Yes");
-// break;
+// let x = true;
+// let y = x++ + ++x;
+// console.log(y);   ---> 4 
+// 1+ 3  2 + 3 
+// 9. Complex coercion
 
-// case 2 :
-// console.log("NO");
-// break;
+// console.log("10" > "2"); false
+// console.log("2" > 10); false
+// console.log("2" < 10); true 
 
-// case 3: 
-// console.log("YAN");
-// break;
+// console.log("10" - "2");  8  
+// console.log("2" - 10);  -8 
+// console.log("2" - 10);  -8
 
-// case 4:
-// console.log("YEN");
-// break;
+// console.log("10" + "2");  102
+// console.log("2" + 10); 210
+// console.log("2" + 10); 210
+ 
+// console.log("10" > "2"); false     how and why ? 
+// The Rule (String vs. String): When comparing two strings using a relational operator (>, <), JavaScript compares the characters from left to right
+// based on their Unicode value (which corresponds to alphabetical order).
+// It checks the first character of each string: "1" vs. "2".Since the character "1" comes before "2" (or has a lower Unicode value),
+// the expression "10" is not greater than "2"   "10" > "2" is false
 
-// default :
-// console.log("It is default");
-// }
 
+// console.log("2" > 10); false
+// because the comparison involves a string and a number, which triggers type coercion to numbers.
 
-// let(let i = 0; i<11; i++ ){
-//     console.log(i)
-// }
+// The Rule (String vs. Number):
+// When comparing a string and a number using a relational operator, JavaScript converts the string into a number first.
 
+// The string "2" is coerced into the number 2.
+// The comparison becomes: 2 > 10.
 
-//Reverse Loop
+// console.log("2" < 10); true  --> if you had understood last sum it is OK.
 
-// for(let i = 65; i<50; i++ ){
-//     console.log(i)
-// }
 
-// for(let i = 1; i< 16; i++){
-//     if(i === 5 && i === 7) {}
-//     else console.log(i) 
-// }
+// 10. Real-world operator logic
+// A payment is successful only if:
+// •	amount > 0
+// •	status === "success"
+// Write this using && and ternary
+// → return "Payment Done" OR "Payment Failed"
 
-// Grade Rank Sum 
-// 90 - 100 = A+
-// 80 - 89 = A
-// 70 - 79 = B
-// 60 - 69 = C
-// 35 - 59 = D
-// 0 - 34 = Fail
+// I wrote this one, ignored status, took safe awy, afraid will get error, I should never take safe way it's ko even if it runs into error
+// let amount = 100
+// let status = amount > 0 && amount > 0  ? "Payment Done" : "Payment Failed";
+// console.log(status)  ---->  Payment Done
 
+// This is optimised way 
+// let amount = 100
+// let status = "success";
 
-// function getgrade(score){
-// if(score <= 34) return "Fail";
-// else if (score <= 59) return "D";
-// else if ( score <= 69) return "C";
-// else if (score <= 79) return "B";
-// else if (score <= 89 ) return "A";
-// else if (score <= 100) return "A+"
-// else return "Invalid Mark"
-// }
-
-// console.log(getgrade(65))
-
-
-// for(let i =1; i<100; i++){
-//   if(1%7 === 0) break;
-// console.log(i)
-// }
-
-
-
-
-// for(let i = 1; i< 10; i++){
-//     if(i%3 === 0)continue;
-//     console.log(i)
-// }
-
-// const onj = {
-
-//     name : "Nikil",
-//     age : 20,
-//     city : "USA", 
-//     state : "UK"  
-// }
-
-// const value = new Object.values(onj)
-// console.log(value)
-// console.log(new Object.keys(onj))
-
-// const cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
-
-// let ck = " "
-// for(let i =1; i<cars.length; i++){
-//     ck += cars[i] + " "
-// console.log(ck)
-// }
-
-
-// let obj = {
-//   name : "Mohith",
-//   age : 40,
-//   city : "Mumbai",
-// }
-
-// let obj2 = Object.create(obj)
-// obj2.state = "Maharashtra";
-// obj2.country = "India"; 
-// console.log(obj2)  { state: 'Maharashtra', country: 'India' }
-
-
-// let obj = {
-//   name : "Mohith",
-//   age : 40,
-//   city : "Mumbai",
-// }
-
-// let obj2 = Object.create(obj)
-// obj2.state = "Maharashtra";
-// obj2.country = "India"; 
-
-// //Now you see why I use for in loop 
-
-// for(let kau in obj2){
-//     console.log(kau, obj2[kau]) 
-    
-// }
-// state Maharashtra
-// country India
-// name Mohith
-// age 40
-// city Mumbai
-
-
-// call back function
-// function name(she){
-//     console.log("I am tanya")
-//  she();
-// }
-
-// name(function greet(){
-//     console.log("How are you Tanya ?")
-// })
-
-// Hello ADP
-// How are you Tanya ?
-
-// function name(fun){
-//     console.log("Hello ADP")
-//     fun();
-// }
-// function greet(){
-//     console.log("Hello all")
-// } 
-
-// name(greet);
-
-// Hello ADP
-// Hello all
-
-
-// let ary = [10,29,31,47,50];
-
-// let res = ary.filter((val)=> val%2 === 1)
-// console.log(result)
-
-
-
-// 5 Table 
-
-// for (let i =1; i<11; i++){
-// console.log(`5 X ${i} = ${5 * 1}`)
-// }
-
-
-
-// for(let i =1; i<101; i++){
-//     if(i%2 === 0){
-//         console.log(`${i} - Even`)
-//     } else {
-//         console.log(`${i} - ODD`)
-//     }
-// }
-
-// Closure
-// function name(){ 
-// let a = "Hello All";
-// return function (){
-//      console.log(a)
-// }}
-
-// let greet = name();
-// greet();  ---> Hello All 
-
-
-// 7- Create eusable Discount Calculator – high order function
-// function discountcalc(discount){
-// return function (price){
-// return price - price * (discount/100);
-// }
-// }
-// let ten = discountcalc(10);
-// let twenty = discountcalc(20);
-// console.log(ten(5000)); ---> 4500
-// console.log(twenty(5000)); ---> 4000
-
-
-// function discalc(discount){
-//     return function (price){
-//         return price - (price * discount/100)
-//     }
-// }
-
-// let ten = discalc(10);
-// let twenty = discalc(20);
-
-// console.log(ten(5000))
-
-
-
-
-// let pin = "Today"
-// let attempt = 0;
-// let maxattempt = 3;
-// while(attempt< maxattempt){
-//     let pass = prompt("Give password? ")
-// if(pass === pin){
-//     console.log("Access Granted")
-//     break;
-// } attempt++;
-//   console.log(`wrong, Attempt left = ${maxattempt - attempt}`)
-//  if(attempt === maxattempt){
-//         console.log("Account is locked")
-// }}
-
-// keep asking as lonas the user enters even no.
-
-
-// let num;
-// while(true){
-//     num = +prompt("What is no.")
-// if(num% 2 === 0){
-//     console.log("Okkkkk")
-//       break;
-// }    else {
-//     console.log("Try again")
-// }}
-
-
-
-// function atm() {
-
-//   let balance = 1000;
-//   let count = 3;
-
-//   while (balance > 0 && count > 0) {
-
-//     let ask = +prompt("How much do you want?");
-//     count--;
-
-//     if (ask > balance) {
-//       console.log("Insufficient balance");
-//       break;
-//     }
-
-//     balance -= ask;
-//     console.log("Successfully Withdrawn", ask);
-//   }
-
-//   console.log("Available balance", balance);
-
-//   if (count === 0) {
-//     console.log("Max attempts reached");
-//   }
-// }
-
-// atm();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// let payment = (amount > 0 && status === "success")  ? "Payment Done" : "Payment Failed";
+// console.log(payment) ---->  Payment Done
