@@ -1,303 +1,265 @@
-// ✅ EASY LEVEL – (10 Questions)
-// (These test your basics; similar to warm-up questions in product companies like Zoho, Freshworks, BrowserStack)
+                    //ARRAY REVISION
+// // 1. Using at(), return the first and last element of:
+// [10, 20, 30, 40, 50]
+// console.log(ab.at(0), ab.at(4))   ---> 10 50
 
-
-// 1. What will be the output?
-// const emp = { id: 10 };
-// emp.id = 20;
-// console.log(emp.id);   20
-
-// 2. What will cause an error?
-// const user = { name: "Raj" };
-// user = { name: "Kiran" };
-// Why?
-// if we are chnahing the name's value then it should be
-// user.name = "Kiran"
-// Immutability vs. Mutability:
-// •	const does NOT make the value immutable. It only makes the variable binding immutable.
-// •	Because the user variable holds an object (a reference type), the contents of that object can still be changed (mutated).
-
-
-// 3. Write a program to print:
-// "Hello Coder Army"
-// using single quotes ' '.
-// console.log(" 'Hello Coder Army' ")
-
-// 4. What does this print?
-// let msg = "Hello \nWorld";
-// console.log(msg); Hello below World
- 
-// 5. Write a program to convert "HELLO" into lowercase.
-// console.log("HELLO".toLowerCase())
-
-
-// 6. How do you print the 4th character of "JavaScript" using array indexing?
-// console.log("JavaScript"[4]) ---> S
-// 7. What will indexOf() return?
-// console.log("JavaScript".indexOf("S"))  ---> 4
-// indexOf will return index no. of the value you entered
-
-// 7. let s = "Hello world";
-// console.log(s.indexOf("World")); -1 since capital W doesn't exist in s
-
-// 8. What does this return?
-// "Coder Army".includes("coder"); -1 small s doesn't exist 
-
-// 9. Write code to remove spaces:
-// let x = "   Hi JavaScript   "; 
-// console.log(x.trim("")); Hi JavaScript
-
-// 10What is the difference between these?
-// 1.	"Hello".slice(1, 3);
-// 2.	"Hello".substring(1, 3);
-// Substring will also print negative indexes
-
-
-
-
-
-
-
-
-// 🟨 MEDIUM LEVEL – (10 Questions)
-// (These match questions asked in interviews of Paytm, Swiggy, Razorpay, Cars24, Airtel Digital)
-// 1.	Reverse a string without using .reverse().
-
-
-// This is for loop method of reversing the Array
-// let str ="Today is Friday"; 
-// let reverse = "";
-// for(let i =str.length - 1; i >= 0; i--){
-//       reverse += str[i];
+// 2. Count elements without using .length:
+// ["js", "html", "css", "react"]
+// let count = 0;
+// for(let i =0; i<ab.length; i++){
+//     count++;
 // }
-// console.log(reverse); -- yadirF si yadoT
-// ------------------
-// let result = str.split("").
-// console.log(result);   ----> "f", "r",...,"y"
-// --------------------
-// let result = str.split("").reverse();
-// console.log(result);   ----> "y", "a",...,"t"
-// -----------------------
-// let str = "Today is Friday";
-// let result = str.split("").reverse("").join("")
-// console.log(result);   ----> yadirF si yadoT
-// ------------------------------
+//  console.log(count);   ---> 4
 
+// let ab = ["js", "html", "css", "react"];
+// let count = 0;
+// ab.forEach(() => {
+//     count++; 
+// });
+// console.log(count); --> 4
 
-// String converting into an Array and then using reduce to reverse this
-// let str = "Today is Friday";
-// console.log(str.split("")) --> ['T', "o", ... , "y"]
-//    let str = "Today is Friday";
-// let result = str.split("").reduce((acc, val)=> {
+// let ab = ["js", "html", "css", "react"];
+// let count = [...ab].length;
+
+// console.log(count);  4
+// 3. Add two values at start and end of:
+// [5, 10, 15]
+// Add "start" at beginning, "end" at last.
+
+// let ab = [5, 10, 15]
+// ab.unshift(1,2);
+// ab.push(3,4);
+// console.log(ab) -  [ 1, 2, 5, 10, 15, 3, 4 ]
+
+// 4. Remove the first 2 elements using shift():
+// ["a", "b", "c", "d", "e"]
+// ab.shift(); ab.shift();
+// console.log(ab); - [ 'c', 'd', 'e' ]
+
+// let ab = ["a", "b", "c", "d", "e"];
+// ab.splice(0, 2); 
+// console.log(ab);   ---> [ 'c', 'd', 'e' ]
+
+// 5. Replace index 3 with "updated":
+// ["red", "blue", "green", "orange", "pink"];
+
+// let ab = ["red", "blue", "green", "orange", "pink"];
+
+// ab.replace("orange" , "upadted");
+// console.log(ab) this will throw error, because we used replace with array, whereas it'll only work with string
+
+// ab[3]="updated";
+// console.log(ab) ---> [ 'red', 'blue', 'green', 'updated', 'pink' ]
+
+// 6. Check if 35 exists using indexOf():
+// [11, 22, 33, 44, 35, 99]
+// let ab = [11, 22, 33, 44, 35, 99];
+// console.log(ab.indexOf(35));  ---> 4
+
+// 7. Make a deep copy using structuredClone() and show they differ:
+// let ab = [100, 200, 300, 400];
+// let abc = structuredClone(ab);
+// console.log(abc)   ---> [ 100, 200, 300, 400 ]
+// abc.push(10);
+// console.log(abc) --->  [ 100, 200, 300, 400, 10 ]
+// ab.push(20)
+// console.log(ab) --->   [ 100, 200, 300, 400, 20 ]
+
+// 8. Convert array into string using join("-"):
+// let ab = ["JS", "is", "super", "fun"];
+// console.log(ab.toString(" "));  --> JS,is,super,fun
+// console.log(ab.join("-")); --> JS-is-super-fun
+
+// 9. Merge arrays using concat -
+// let ab = [1, 2, 3] 
+// let cb = [4, 5, 6]
+// let merge = ab.concat(cb);
+// console.log(merge)  ---> [ 1, 2, 3, 4, 5, 6 ]
+
+// 10. Print the middle element of this 2D array:
+// let ab = [[10, 20], [30, 40], [50, 60]];
+// let merge = ab[1];
+// console.log(merge);  --> [ 30, 40 ]
+
+// 🟧 10 MEDIUM LEVEL (with actual values)
+// 11. Reverse the array (without .reverse()):
+// [9, 8, 7, 6, 5]
+// 12. Find the second largest:  -- DSA
+// [10, 45, 32, 67, 89, 50]
+// 13. Remove duplicates:
+// [2, 4, 2, 5, 7, 5, 9, 9]
+// 14. Remove elements from index 2–5 using splice:
+// [100, 200, 300, 400, 500, 600, 700, 800]
+// 15. Insert 100 at index 4 (no deletion):
+// [10, 20, 30, 40, 50, 60]
+
+// 16. Convert 2D → 1D using .flat():
+// [[1, 2], [3, 4], [5, 6]]
+// 17. Sort ASC & DESC:
+// [11, 55, 3, 99, 42, 10]
+// 18. Merge 3 arrays:
+// [1,2], [3,4], [5,6]
+// 19. Count even numbers:
+// [2, 7, 12, 9, 18, 23, 30]
+// 20. Access the deep value in 3D array:
+// [[1, 2, [100, 200]], [3, 4], [5, 6]]
+// Extract: 200
+// ________________________________________
+
+// 🟧 10 MEDIUM LEVEL (with actual values)
+// 11. Reverse the array (without .reverse()):
+// let ab = [9, 8, 7, 6, 5];
+// let result = ab.reverse();
+// console.log(result) ---> [ 5, 6, 7, 8, 9 ]
+// Only with Array reverse will work directly for string we use split reverse join to reverse the String value.
+
+// let ab = [9, 8, 7, 6, 5];
+// let result = ab.reduce((acc, val)=> {
 //    return val + acc;
 // }, "")
-// console.log(result)  ---> yadirF si yadoT
+// console.log(result);   -  56789
 
-// From the string: let str = "Today is Friday";
-// extract "Friday" using slice() with negative index.
+// 13. Remove duplicates:
+// let ab = [2, 4, 2, 5, 7, 5, 9, 9]
+// let result = new Set(ab); 
+// console.log(result) ---> Set(5) { 2, 4, 5, 7, 9 }
+// 14. Remove elements from index 2–5 using splice:
+// let ab = [100, 200, 300, 400, 500, 600, 700, 800]
+// ab.splice(2,5)
+// console.log(ab) ---> [ 100, 200, 800 ]
+// array.splice(startIndex, deleteCount)
 
-// 2.	Replace only the first "is" in:
-// "This is JavaScript and this is fun"
-// 3.	Replace all "is" with "was".
-// 4.	Write code to count number of "Coder" in:
-// "Hello Coder Army Coder Army Coder"
+// Remove 2 elements starting at index 1, and insert "A" and "B"
+// let arr = [1, 2, 3, 4];
+// arr.splice(1, 2, "A", "B");
+// console.log(arr); -----> [1, "A", "B", 4]
+// it's worth noting that splice() can also replace elements by adding a third argument (and subsequent arguments):
+// arr.splice(1, 2, "A", "B"); - here 1st we wanna delete till 2 
+// nums 1 itself and next one, 1 is start from 1, st index, 2 is
+// total nums.  
 
-// 5.	Given:
-// const obj = { id: 1, name: "Arun" };
-// const copy = obj;
-// obj.id = 100;
-// console.log(copy.id);
-// Why does it print 100? (Explain referencing)
-// const obj = { id: 1, name: "Arun" };
-// let cool = obj;
-// cool.id = 100;
-// obj.id = 200;
-// console.log(cool.id);  --> 200
- 
-// obj.id = 300;
-// console.log(cool.id);  --> 300
- 
-// why it printed 100 ? because the const is replaced with another const 
-// const a = 10;
-// let b = a;
-// console.log(b) //---> 10
+// 15. Insert 100 at index 4 (no deletion):
+// let arr = [10, 20, 30, 40, 50, 60];
+// arr.splice(4,0,100)
+// console.log(arr); [10, 20, 30, 40, 100, 50, 60]
+// array.splice(startIndex, deleteCount, item1, item2, ...)
 
-// const a = 10;
-// let b = 20;
-// a = b;
-// console.log(a)  ---> Assignment to constant variable. Error
-// here we can assign the cosnt to let only when let has no own variable and value 
-// "we can assign the const to let only when let has no own variable and value"—isn't quite right. The issue is purely about which variable is on the left side of the assignment operator (=).
-// The Only Rule for const
-// The const keyword makes the variable immutable in terms of its binding (the reference it holds). It prevents the variable from being reassigned.
-// The fundamental rule is: A variable declared with const can never appear on the left side of the assignment operator (=) after its initial declaration.
-
-// The success of the assignment has nothing to do with whether the let variable (b) was initialized first. The assignment let b = a; would still work even if b had a value:
-// const a = 10;
-// let b = 50; // 'b' has its own value (50)
-// b = a;      // 'b' is reassigned to 10 (still works fine)
-// console.log(b); // 10
-// The operation is only restricted when the const variable is on the left side.
-
-// 6.	Extract "Night" from:
-// "Good Night Everyone" using substring().
-// let res = "Good Night Everyone";  
-// console.log(res.substring(5,10));  ---> Night
-
-
-// 7.Using template literals, print:
-// Hi Rohith, your balance is 2000
-// where name and balance come from variables.
-
-// let name = "Rohith";
-// let balance = 2000;
-// console.log(`Hi ${name}, your balance is ${balance}`) --->Hi Rohith, your balance is 2000
-
-// 8.Given:
-// const name = new String("Rohith");
-// What is typeof name and why?
-
-// When you use the syntax new String("Rohith"), you are not creating a simple string primitive. You are explicitly creating a String object (an instance of the built-in String constructor).
-
-// Primitives: A variable created with let name = "Rohith"; results in typeof name being "string". This is the most common and preferred way to handle strings.
-
-// Objects: When you prepend new before a constructor function (like String, Number, or Boolean), JavaScript wraps the value in an object. This object has properties and methods, and its typeof is always "object"
-
-
-// const name = new Number("Rohith");
-// const name = new String("Rohith");
-// console.log(typeof name) ---> Object ________________________________________
-// 🔥 HARD LEVEL – (10 Questions)
-// (Asked in interviews of Amazon, Microsoft, Walmart, Uber, Atlassian – using ONLY string/object basics)
-// 1.	Write a program to capitalize the first letter of every word in a sentence.
-// Example: "hello coder army" → "Hello Coder Army"
-
-
-// let str = "hello coder army"
-// let result = str
-//           .split(" ")
-//           .map(word => word[0].toUpperCase() + word.slice(1)) 
-//           .join(" ");
-
-//  console.log(result)  ----> Hello Coder Army
-
-// let result = str.split(" ").map(word => word[0].toUpperCase() + word.slice(1)) .join(" ");
-//  console.log(result)  ----> Hello Coder Army
-// ------------------------
-// let month = ["jan","feb", "mar", "apr", "may","jun","july"];
-// console.log(month.map(val => val.toUpperCase()));
-// ----------------------------
+// 16. Convert 2D → 1D using .flat():
+// let arr = [[1, 2], [3, 4], [5, 6]];
+// console.log(arr.flat()) ---> [ 1, 2, 3, 4, 5, 6 ]
 
 
 
 
-// 2. Given a string, remove all duplicate characters.
-// "banana" → "ban"
+// 17. Sort ASC & DESC:
+// let arr = [11, 55, 3, 99, 42, 10]
+// let sos = arr.sort(function (a,b){
+//     return b - a
+// })
+// console.log(arr) [ 3, 10, 11, 42, 55, 99 ]
+// return b - a     [ 99, 55, 42, 11, 10, 3 ]
 
-// let str = "Banana";
-// let result = [...new Set(str.split(""))].join("");
-// console.log(result);
-//  Output: Ban
-// // 1. Split the string into an array of characters.
-// // 2. Create a new Set from the array, which automatically filters out duplicates.
-// // 3. Use the spread operator ([...]) to convert the Set back to an array.
-// // 4. Join the array back into a single string.
+// 18. Merge 3 arrays:
+// [1,2], [3,4], [5,6]
+// let arr = [[1,2], [3,4], [5,6]];
+// console.log(arr.flat())  [ 1, 2, 3, 4, 5, 6 ]
 
-// 2. Find the maximum occurring character in a string.
-// "Javascript" → "a"
-
-// If else way to find ans
-
-// let str = "javascripat";
-
-// let count = {};
-// let maxChar = "";
-// let maxCount = 0;
-
-// for (let key of str) {
-//   if (count[key] === undefined) {
-//     count[key] = 1;        // first time we see the character
-//   } else {
-//     count[key]++;          // character already exists, so increase count
-//   }
-
-//   if (count[key] > maxCount) {
-//     maxCount = count[key];
-//     maxChar = key;
-//   }
+// 19. Count even numbers:
+// let arr = [2, 7, 12, 9, 18, 23, 30]
+// let count = "";
+// for(let i = 0; i<arr.length; i++ ){
+//     if( i%2 ===0  )
+//     count++
 // }
+// console.log(count)  ---> 4
 
-// console.log(maxChar);   a 
+// 20. Access the deep value in 3D array:
+// let arr = [[1, 2, [100, 200]], [3, 4], [5, 6]];
+// //Extract: 200
+// console.log(arr[0][2][1]);  - 200.
 
-// -------------------------------
-// Map way to find
 
-// let str = "javascript";
+
+
+// 🔥 10 HARD LEVEL (with actual values)
+// 21. Count the frequency of numbers using Map:
+// [1, 2, 1, 3, 2, 1, 4, 4]
+// 22. Group words by length using Map:
+// ["hi", "cat", "go", "sun", "a", "sky"]
+// 23. Rotate array right by 2:
+// [10, 20, 30, 40, 50]
+// 24. Find longest increasing sequence:
+// [5, 6, 7, 1, 2, 3, 4, 0, 10, 11]
+// 25. Remove all falsy values:
+// [0, 1, false, 2, "", 3, null, "js", undefined, NaN]
+// 26. Flatten 2D → 1D without .flat():
+// [[1, 2, 3], [4, 5], [6, 7, 8]]
+// 27. Return array where each item = product of all other items:
+// [1, 2, 3, 4]
+// Output should be:
+// [24, 12, 8, 6]
+// 28. Separate mixed array into 3 arrays:
+// [10, "JS", true, 5, false, "code", 9]
+// → numbers, strings, booleans
+// 29. Remove duplicates from a sorted array (use splice):
+// [1,1,2,2,2,3,4,4,5]
+// 30. Max occurring character using Map:
+// "mississippi"
+// ________________________________________
+// 21. Count the frequency of numbers using Map:
+// let arr = [1, 2, 1, 3,4, 2, 1, 3,4];
 
 // let map = new Map();
-// let maxChar = " ";
-// let maxCount = 0;
+// for(let num of arr){
 
-// for (let kay of str) {
-//   // Update count using Map
-//   map.set(kay, (map.get(kay) || 0) + 1);
-//   // Track the max frequency
-//   if (map.get(kay) > maxCount) {
-//     maxCount = map.get(kay);
-//         maxChar = kay;
-//   }
+//     map.set(num,   (map.get(num)  || 0)+1)
 // }
-// console.log(maxChar);   --->  a
+// console.log(map) ---> Map(4) { 1 => 3, 2 => 2, 3 => 2, 4 => 2 }
+
+// 25. Remove all falsy values: 
+// let arr = [0, 1, false, 2, "", 3, null, "js", undefined, NaN];
+
+// // The Boolean constructor acts as a function that converts the value
+// // to true or false. Only 'true' values are kept by filter().
+// let result = arr.filter(Boolean);
+
+// console.log(result);  ---> [ 1, 2, 3, 'js' ]
 
 
-// I want to find how many times a has occured 
+// 28. Separate mixed array into 3 arrays:
+// [10, "JS", true, 5, false, "code", 9]
+// → numbers, strings, booleans
+// let arr = [10, "JS", true, 5, false, "code", 9];
 
-// let ab = "Javascripat";
-// let count = "";
+// const numbers = arr.filter(item => typeof item === 'number');
+// const strings = arr.filter(item => typeof item === 'string');
+// const booleans = arr.filter(item => typeof item === 'boolean');
 
-// for(let i = 0; i < ab.length; i++){
-  
-//   if(ab[i] === "a")
-//   count++;
+// console.log("Numbers:", numbers);   Numbers: [ 10, 5, 9 ]
+// console.log("Strings:", strings);   Strings: [ 'JS', 'code' 
+// console.log("Booleans:", booleans);  Booleans: [ true, false ]
+
+
+// 29. Remove duplicates from a sorted array (use splice):
+// [1,1,2,2,2,3,4,4,5]
+// //29. Remove duplicates from a sorted array (use splice):
+// let arr = [1, 1, 2, 2, 2, 3, 4, 4, 5];
+
+// // Iterate backward, starting from the second-to-last element (i=7)
+// for (let i = arr.length - 1; i >= 1; i--) {
+//     // Check if the current element (arr[i]) is equal to the element before it (arr[i - 1])
+//     if (arr[i] === arr[i - 1]) {
+//         // If they are duplicates, remove the current element (arr[i])
+//         // splice(startIndex, deleteCount)
+//         arr.splice(i, 1);
+//     }
 // }
-// console.log(count);  ---> 3 
+// console.log(arr); 
 
-// count = 0;
-// for(let key of ab){
-//   if (key === "a") 
-//   count++
-// }
-// console.log(count)  ---> 3 
+// I will follow below method only  when we 're removing duplicate
+// let arr = [1, 1, 2, 2, 2, 3, 4, 4, 5];
+// // 1. Create a Set from the array (removes duplicates)
+// // 2. Use the Spread Operator (...) to convert the Set back into an array
+// let are= [...new Set(arr)]; 
+// console.log(are); -  [ 1, 2, 3, 4, 5 ]
 
-
-// 2.	Check if two strings are anagrams or not.
-// "listen" and "silent"
-// 3.	Without using .trim(), remove leading & trailing spaces manually.
-
-// let str = "   Hello World!   ";
-
-// // The RegEx pattern to match:
-// // 1. ^\s+: Matches one or more space characters (\s) at the beginning of the string (^)
-// // 2. |\s+$: OR (|) matches one or more space characters (\s+) at the end of the string ($)
-// let result = str.replace(/^\s+|\s+$/g, "");
-
-// console.log(result);
-// // Output: "Hello World!"
-
-
-// 4. Given:
-// const obj = { a: 1 };
-// let x = obj;
-// const y = obj;
-// x.a = 50;
-// y.a = 200;
-// console.log(obj.a);
-// Explain the output. 200
-// It is like cascading only
-
-// 5.Convert this string into snake case:
-// "Today Is A Great Day" → "today_is_a_great_day"
-// 6.Reverse only the words, not the whole string.
-// "I love JavaScript" → "JavaScript love I"
-// console.log("I love JavaScript".split(" ").reverse().join(" ") )
-// JavaScript love I
