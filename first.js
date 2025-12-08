@@ -1,265 +1,453 @@
-                    //ARRAY REVISION
-// // 1. Using at(), return the first and last element of:
-// [10, 20, 30, 40, 50]
-// console.log(ab.at(0), ab.at(4))   ---> 10 50
-
-// 2. Count elements without using .length:
-// ["js", "html", "css", "react"]
-// let count = 0;
-// for(let i =0; i<ab.length; i++){
-//     count++;
-// }
-//  console.log(count);   ---> 4
-
-// let ab = ["js", "html", "css", "react"];
-// let count = 0;
-// ab.forEach(() => {
-//     count++; 
-// });
-// console.log(count); --> 4
-
-// let ab = ["js", "html", "css", "react"];
-// let count = [...ab].length;
-
-// console.log(count);  4
-// 3. Add two values at start and end of:
-// [5, 10, 15]
-// Add "start" at beginning, "end" at last.
-
-// let ab = [5, 10, 15]
-// ab.unshift(1,2);
-// ab.push(3,4);
-// console.log(ab) -  [ 1, 2, 5, 10, 15, 3, 4 ]
-
-// 4. Remove the first 2 elements using shift():
-// ["a", "b", "c", "d", "e"]
-// ab.shift(); ab.shift();
-// console.log(ab); - [ 'c', 'd', 'e' ]
-
-// let ab = ["a", "b", "c", "d", "e"];
-// ab.splice(0, 2); 
-// console.log(ab);   ---> [ 'c', 'd', 'e' ]
-
-// 5. Replace index 3 with "updated":
-// ["red", "blue", "green", "orange", "pink"];
-
-// let ab = ["red", "blue", "green", "orange", "pink"];
-
-// ab.replace("orange" , "upadted");
-// console.log(ab) this will throw error, because we used replace with array, whereas it'll only work with string
-
-// ab[3]="updated";
-// console.log(ab) ---> [ 'red', 'blue', 'green', 'updated', 'pink' ]
-
-// 6. Check if 35 exists using indexOf():
-// [11, 22, 33, 44, 35, 99]
-// let ab = [11, 22, 33, 44, 35, 99];
-// console.log(ab.indexOf(35));  ---> 4
-
-// 7. Make a deep copy using structuredClone() and show they differ:
-// let ab = [100, 200, 300, 400];
-// let abc = structuredClone(ab);
-// console.log(abc)   ---> [ 100, 200, 300, 400 ]
-// abc.push(10);
-// console.log(abc) --->  [ 100, 200, 300, 400, 10 ]
-// ab.push(20)
-// console.log(ab) --->   [ 100, 200, 300, 400, 20 ]
-
-// 8. Convert array into string using join("-"):
-// let ab = ["JS", "is", "super", "fun"];
-// console.log(ab.toString(" "));  --> JS,is,super,fun
-// console.log(ab.join("-")); --> JS-is-super-fun
-
-// 9. Merge arrays using concat -
-// let ab = [1, 2, 3] 
-// let cb = [4, 5, 6]
-// let merge = ab.concat(cb);
-// console.log(merge)  ---> [ 1, 2, 3, 4, 5, 6 ]
-
-// 10. Print the middle element of this 2D array:
-// let ab = [[10, 20], [30, 40], [50, 60]];
-// let merge = ab[1];
-// console.log(merge);  --> [ 30, 40 ]
-
-// 🟧 10 MEDIUM LEVEL (with actual values)
-// 11. Reverse the array (without .reverse()):
-// [9, 8, 7, 6, 5]
-// 12. Find the second largest:  -- DSA
-// [10, 45, 32, 67, 89, 50]
-// 13. Remove duplicates:
-// [2, 4, 2, 5, 7, 5, 9, 9]
-// 14. Remove elements from index 2–5 using splice:
-// [100, 200, 300, 400, 500, 600, 700, 800]
-// 15. Insert 100 at index 4 (no deletion):
-// [10, 20, 30, 40, 50, 60]
-
-// 16. Convert 2D → 1D using .flat():
-// [[1, 2], [3, 4], [5, 6]]
-// 17. Sort ASC & DESC:
-// [11, 55, 3, 99, 42, 10]
-// 18. Merge 3 arrays:
-// [1,2], [3,4], [5,6]
-// 19. Count even numbers:
-// [2, 7, 12, 9, 18, 23, 30]
-// 20. Access the deep value in 3D array:
-// [[1, 2, [100, 200]], [3, 4], [5, 6]]
-// Extract: 200
+                 
+//                  OBJECTS - Revision
+// Perfect! 🎉
+// I’ll give you 30 PRODUCT-BASED interview questions (Easy, Medium, Hard) ONLY from the topics you studied:
+// ✔ Objects (creation, access)
+// ✔ Nested Objects
+// ✔ Delete / Modify
+// ✔ Object.assign
+// ✔ Spread operator
+// ✔ Shallow Copy vs Deep Copy
+// ✔ structuredClone
+// ✔ Destructuring (Object + Array + Nested)
+// ✔ Functions inside objects
+// ✔ __proto__ (Prototype)
+// ✔ Computed Properties
+// ✔ Why arrays are objects
+// ✔ Everything related to Object Basics
+// No DOM. Only OBJECTS.
+// No answers, only interview-style problem statements.
+// This makes it perfect revision + real interview simulation.
+// ________________________________________
+// ✅ EASY – 10 Questions
+// (Direct output, simple logic, property access)
+// 1. Basic Object Access
+// Create an object student with properties name, age, score. Print the score using both dot and bracket notation.
+// 2. Modify Properties
+// Given:
+// const emp = { name: "Aman", salary: 40000 };
+// Change the salary to 55000 and print final object.
+// 3. Delete a Property
+// Delete the property age from:
+// const user = { name: "Rohit", age: 25, city: "Mumbai" };
+// 4. Access Key With Space
+// Access "account balance" from this object:
+// const bank = {
+//   name: "Raj",
+//   "account balance": 5000
+// };
+// 5. Array Inside Object
+// Print the 3rd value from:
+// const info = { marks: [10, 20, 30, 40] };
+// 6. Object Inside Object
+// Print the pincode:
+// const user = { address: { city: "Pune", pincode: 442200 } };
+// 7. Create Object Using new Object()
+// Add 3 properties using dot notation.
+// 8. Object.keys() Output
+// What does this print?
+// const obj = { a:1, b:2 };
+// console.log(Object.keys(obj));
+// 9. Object.values() Output
+// Predict output:
+// Object.values({ lang:"JS", level:1 });
+// 10. Computed Property
+// What is the final object?
+// let role = "admin";
+// const obj = { [role]: "Rakesh" };
 // ________________________________________
 
-// 🟧 10 MEDIUM LEVEL (with actual values)
-// 11. Reverse the array (without .reverse()):
-// let ab = [9, 8, 7, 6, 5];
-// let result = ab.reverse();
-// console.log(result) ---> [ 5, 6, 7, 8, 9 ]
-// Only with Array reverse will work directly for string we use split reverse join to reverse the String value.
 
-// let ab = [9, 8, 7, 6, 5];
-// let result = ab.reduce((acc, val)=> {
-//    return val + acc;
-// }, "")
-// console.log(result);   -  56789
-
-// 13. Remove duplicates:
-// let ab = [2, 4, 2, 5, 7, 5, 9, 9]
-// let result = new Set(ab); 
-// console.log(result) ---> Set(5) { 2, 4, 5, 7, 9 }
-// 14. Remove elements from index 2–5 using splice:
-// let ab = [100, 200, 300, 400, 500, 600, 700, 800]
-// ab.splice(2,5)
-// console.log(ab) ---> [ 100, 200, 800 ]
-// array.splice(startIndex, deleteCount)
-
-// Remove 2 elements starting at index 1, and insert "A" and "B"
-// let arr = [1, 2, 3, 4];
-// arr.splice(1, 2, "A", "B");
-// console.log(arr); -----> [1, "A", "B", 4]
-// it's worth noting that splice() can also replace elements by adding a third argument (and subsequent arguments):
-// arr.splice(1, 2, "A", "B"); - here 1st we wanna delete till 2 
-// nums 1 itself and next one, 1 is start from 1, st index, 2 is
-// total nums.  
-
-// 15. Insert 100 at index 4 (no deletion):
-// let arr = [10, 20, 30, 40, 50, 60];
-// arr.splice(4,0,100)
-// console.log(arr); [10, 20, 30, 40, 100, 50, 60]
-// array.splice(startIndex, deleteCount, item1, item2, ...)
-
-// 16. Convert 2D → 1D using .flat():
-// let arr = [[1, 2], [3, 4], [5, 6]];
-// console.log(arr.flat()) ---> [ 1, 2, 3, 4, 5, 6 ]
-
-
-
-
-// 17. Sort ASC & DESC:
-// let arr = [11, 55, 3, 99, 42, 10]
-// let sos = arr.sort(function (a,b){
-//     return b - a
-// })
-// console.log(arr) [ 3, 10, 11, 42, 55, 99 ]
-// return b - a     [ 99, 55, 42, 11, 10, 3 ]
-
-// 18. Merge 3 arrays:
-// [1,2], [3,4], [5,6]
-// let arr = [[1,2], [3,4], [5,6]];
-// console.log(arr.flat())  [ 1, 2, 3, 4, 5, 6 ]
-
-// 19. Count even numbers:
-// let arr = [2, 7, 12, 9, 18, 23, 30]
-// let count = "";
-// for(let i = 0; i<arr.length; i++ ){
-//     if( i%2 ===0  )
-//     count++
+// 1. Basic Object Access
+// Create an object student with properties name, age, score. Print the score using both dot and bracket notation.
+// let stu= {
+//     name : "Rohith",
+//     age : 55,
+//     score: 100
 // }
-// console.log(count)  ---> 4
+// console.log(stu.score) ---> 100
+// console.log(stu["score"])  ---> 100
 
-// 20. Access the deep value in 3D array:
-// let arr = [[1, 2, [100, 200]], [3, 4], [5, 6]];
-// //Extract: 200
-// console.log(arr[0][2][1]);  - 200.
+// 2. Modify Properties Given:
+// const emp = { name: "Aman", salary: 40000 };
+// Change the salary to 55000 and print final object.
+// emp.salary = 55000
+// console.log(emp)  --> { name: 'Aman', salary: 55000 }
+
+
+// 3. Delete a Property --> Delete the property age from:
+// const user = { name: "Rohit", age: 25, city: "Mumbai" };
+// delete(user.age)
+// console.log(user) ---> { name: 'Rohit', city: 'Mumbai' }
+
+// 4. Access Key With Space
+// Access "account balance" from this object:
+// const bank = {
+//   name: "Raj",
+//   "account balance": 5000
+// };
+// console.log(bank["account balance"]) ---> 5000
+// 5. Array Inside Object
+// Print the 3rd value from:
+// const info = { marks: [10, 20, 30, 40] };
+// console.log(info.marks[3])  ---> 40
+
+// 6. Object Inside Object modify and print the pincode:
+// const user = { address: { city: "Pune", pincode: 442200 } };
+// user.address.pincode = 500
+// console.log(user.address.pincode)  --> 500
+
+// 7. Create Object Using new Object()
+// Add 3 properties using dot notation.
+// let person = new Object();
+// person.name = "Rohith",
+// person.age = 62,
+// person.city = "Mumbai",
+// person.age = 22
+// console.log(person)  --> { name: 'Rohith', age: 22, city: 'Mumbai' }
+
+// 8. Object.keys() Output
+// What does this print?
+// const obj = { a:1, b:2 };
+// console.log(Object.keys(obj));  --> [ 'a', 'b' ]
+
+// 9. Object.values() Output Predict output:
+// Object.values({ lang:"JS", level:1 });  ---> JS 1 
 
 
 
+// 10. Computed Property What is the final object?
+// let role = "admin";
+// const obj = { [role]: "Rakesh" };
+// console.log(obj)  ---> { admin: 'Rakesh' }
 
-// 🔥 10 HARD LEVEL (with actual values)
-// 21. Count the frequency of numbers using Map:
-// [1, 2, 1, 3, 2, 1, 4, 4]
-// 22. Group words by length using Map:
-// ["hi", "cat", "go", "sun", "a", "sky"]
-// 23. Rotate array right by 2:
-// [10, 20, 30, 40, 50]
-// 24. Find longest increasing sequence:
-// [5, 6, 7, 1, 2, 3, 4, 0, 10, 11]
-// 25. Remove all falsy values:
-// [0, 1, false, 2, "", 3, null, "js", undefined, NaN]
-// 26. Flatten 2D → 1D without .flat():
-// [[1, 2, 3], [4, 5], [6, 7, 8]]
-// 27. Return array where each item = product of all other items:
-// [1, 2, 3, 4]
-// Output should be:
-// [24, 12, 8, 6]
-// 28. Separate mixed array into 3 arrays:
-// [10, "JS", true, 5, false, "code", 9]
-// → numbers, strings, booleans
-// 29. Remove duplicates from a sorted array (use splice):
-// [1,1,2,2,2,3,4,4,5]
-// 30. Max occurring character using Map:
-// "mississippi"
+
+// ✅ MEDIUM – 10 Questions
+// (Destructuring, spread, assign, nested access, shallow copies)
+// 11. Object Destructuring
+// Extract name & state from:
+// const p = { name:"Kavi", city:"Chennai", state:"TN" };
+// 12. Destructuring With Renaming
+// Rename:
+// name→fullName, city→town
+// 13. Spread Operator Merge
+// Merge using spread:
+// let a = { x:1, y:2 };
+// let b = { z:3 };
+// 14. Object.assign
+// Copy obj1 + obj2 into a new object:
+// let obj1 = { a:10 };
+// let obj2 = { b:20 };
+// 15. Shallow Copy Behavior
+// Predict output:
+// let p1 = { a: 10, nested: { x:1 } };
+// let p2 = p1;
+// p2.nested.x = 100;
+// console.log(p1.nested.x);
+
+
+// 16. Nested Destructuring
+// Extract doorno from:
+// const house = { 
+//   address: { city:"Delhi", doorno:55 }
+// };
+// 17. Array Destructuring Inside Object
+// Extract 1st and 3rd number:
+// const data = { arr:[50, 60, 70, 80] };
+// 18. Rest Operator in Object
+// Split:
+// const emp = { name:"Rohan", age:25, city:"Goa", salary:30000 };
+// Extract name, and store remaining in a new object.
+// 19. Function Inside Object
+// Call the function:
+// const machine = {
+//   start: function() { return "Machine Started"; }
+// };
+// 20. Why Array typeof is Object
+// Print the type and access a value using bracket like object.
 // ________________________________________
-// 21. Count the frequency of numbers using Map:
-// let arr = [1, 2, 1, 3,4, 2, 1, 3,4];
 
-// let map = new Map();
-// for(let num of arr){
+// 11. Object Destructuring Extract name & state from:
+// const p = { name:"Kavi", city:"Chennai", state:"TN" };
+// const { name,state} = p
+// console.log(name,state) --> Kavi TN
 
-//     map.set(num,   (map.get(num)  || 0)+1)
-// }
-// console.log(map) ---> Map(4) { 1 => 3, 2 => 2, 3 => 2, 4 => 2 }
+// 12. Destructuring With Renaming
+// Rename: name→fullName, city→town
+//  const p = { name:"Kavi", city:"Chennai", state:"TN" };
+// const { name : fullName, city : town  } = p
+// console.log(fullName, town)  --> Kavi Chennai
 
-// 25. Remove all falsy values: 
-// let arr = [0, 1, false, 2, "", 3, null, "js", undefined, NaN];
+//  13. Spread Operator Merge --> Merge using spread:
+// let a = { x:1, y:2 };
+// let b = { z:3 };
+// let c = {...a,...b } 
+// console.log(c) --> { x: 1, y: 2, z: 3 }
 
-// // The Boolean constructor acts as a function that converts the value
-// // to true or false. Only 'true' values are kept by filter().
-// let result = arr.filter(Boolean);
+// 14. Object.assign Copy obj1 + obj2 into a new object:
+// let obj1 = { a:10 };
+// let obj2 = { b:20 };
 
-// console.log(result);  ---> [ 1, 2, 3, 'js' ]
+// let obj3 = Object.assign(obj1,obj2)
+// console.log(obj3)  --> { a: 10, b: 20 }
+// I wanted to know how can we use array's values in spread 
 
+// let obj1 = [10];
+// let obj2 = [20, 30];
 
-// 28. Separate mixed array into 3 arrays:
-// [10, "JS", true, 5, false, "code", 9]
-// → numbers, strings, booleans
-// let arr = [10, "JS", true, 5, false, "code", 9];
+// // The target is a new empty array literal []
+// // obj1 and obj2 are the source objects
+// let result = Object.assign([], obj1, obj2);
 
-// const numbers = arr.filter(item => typeof item === 'number');
-// const strings = arr.filter(item => typeof item === 'string');
-// const booleans = arr.filter(item => typeof item === 'boolean');
-
-// console.log("Numbers:", numbers);   Numbers: [ 10, 5, 9 ]
-// console.log("Strings:", strings);   Strings: [ 'JS', 'code' 
-// console.log("Booleans:", booleans);  Booleans: [ true, false ]
+// console.log(result);    --->  [20, 30]
+// console.log(result.length);   --->  2
 
 
-// 29. Remove duplicates from a sorted array (use splice):
-// [1,1,2,2,2,3,4,4,5]
-// //29. Remove duplicates from a sorted array (use splice):
-// let arr = [1, 1, 2, 2, 2, 3, 4, 4, 5];
 
-// // Iterate backward, starting from the second-to-last element (i=7)
-// for (let i = arr.length - 1; i >= 1; i--) {
-//     // Check if the current element (arr[i]) is equal to the element before it (arr[i - 1])
-//     if (arr[i] === arr[i - 1]) {
-//         // If they are duplicates, remove the current element (arr[i])
-//         // splice(startIndex, deleteCount)
-//         arr.splice(i, 1);
-//     }
-// }
-// console.log(arr); 
+// 15. Shallow Copy Behavior  Predict output:
+// let p1 = { a: 10, nested: { x:1 } };
+// let p2 = p1;
+// p2.nested.x = 100;
+// console.log(p1); --> { a: 10, nested: { x: 100 } }
+// console.log(p2)  --> { a: 10, nested: { x: 100 } }
 
-// I will follow below method only  when we 're removing duplicate
-// let arr = [1, 1, 2, 2, 2, 3, 4, 4, 5];
-// // 1. Create a Set from the array (removes duplicates)
-// // 2. Use the Spread Operator (...) to convert the Set back into an array
-// let are= [...new Set(arr)]; 
-// console.log(are); -  [ 1, 2, 3, 4, 5 ]
+// 16. Nested Destructuring -- Extract doorno from:
+// const house = { 
+//   address: { city:"Delhi", doorno:55 }
+// };
+// console.log(house.address.doorno) --> 55
 
+
+
+// 17. Array Destructuring Inside Object -- Extract 1st and 3rd number:
+// const data = { arr:[50, 60, 70, 80] };
+// const { arr : [one, , three ]} = data;
+// console.log(one,three) ---> 50 70
+
+// 18. Rest Operator in Object Split:
+// Extract name, and store remaining in a new object.
+// const emp = { name:"Rohan", age:25, city:"Goa", salary:30000 };
+
+// const {name, ...emp2} = emp
+// console.log(name,emp2)  ---> Rohan { age: 25, city: 'Goa', salary: 30000 }
+
+
+// 19. Function Inside Object  -- Call the function:
+// const machine = {
+//   start: function() { return "Machine Started"; }
+// };
+// console.log(machine.start()); --> Machine Started
+
+
+// 20. Why Array typeof is Object
+// Print the type and access a value using bracket like object.
+// const myArray = ["apple", "banana", "cherry"];
+
+// Print the type
+// console.log(typeof myArray); // Output: object
+//  console.log(myArray[1]);     // Output: banana
+
+
+
+// ✅ HARD – 10 Questions
+// (Deep vs Shallow copy with nested objects, prototype chain, trick-based destructuring, structuredClone, computed keys logic)
+// 21. Deep Copy Using structuredClone
+// Copy this object deeply and modify marks.math so original doesn't change:
+// const student = {
+//   name:"Hari",
+//   marks:{ math:90, eng:85 }
+// };
+// 22. Object.assign + Nested Trap
+// Predict:
+// const user1 = {
+//   name:"Rohit",
+//   address:{ city:"Pune" }
+// };
+// const user2 = Object.assign({}, user1);
+// user2.address.city = "Mumbai";
+// console.log(user1.address.city);
+// 23. Spread Operator + Nested Trap
+// Predict:
+// const a = { x:1, nested:{ z:50 } };
+// const b = { ...a };
+// b.nested.z = 500;
+// console.log(a.nested.z);
+// 24. Nested Object Destructuring + Rename
+// Extract pincode as pin
+// and state as st from:
+// const profile = {
+//   address:{
+//     city:"Hyd",
+//     pincode:887766,
+//     state:"TS"
+//   }
+// };
+// 25. Mixed Array + Object Destructuring
+// Extract "JS" and 40:
+// const mix = {
+//   lang:["JS","Python","Java"],
+//   numbers:[10,20,30,40]
+// };
+// 26. Prototype Chaining
+// Use prototype so user2 can access user1 properties:
+// let user1 = { city:"Delhi" };
+// let user2 = { name:"Ravi" };
+// 27. Create Your Own Prototype Method
+// Add a method to all objects that returns "Hello Prototype"
+// (use Object.prototype)
+// 28. Challenging Computed Properties
+// Predict:
+// let key1 = "score";
+// let key2 = 10;
+// const obj = {
+//   [key1]:"A+",
+//   [key2]:"Ten",
+//   true:"yes"
+// };
+// console.log(obj);  
+
+// 29. Destructure and Skip elements
+// Extract only 1st & 4th values:
+// let arr = [99,80,70,60,50];
+// 30. Deep Copy + Modify Nested + Prove Original Unchanged
+// Use structuredClone to solve:
+// const prod = {
+//   id:1,
+//   details:{
+//     price:500,
+//     stock:30
+//   }
+// };
+// ________________________________________
+
+
+// 21. Deep Copy Using structuredClone
+// Copy this object deeply and modify marks.math so original doesn't change:
+// const stu = {
+//   name:"Hari",
+//   marks:{ math:90, eng:85 }
+// };
+// console.log(stu) ---> { name: 'Hari', marks: { math: 90, eng: 85 } }
+// const stud = structuredClone(stu)
+// stud.marks.math = 50;
+// console.log(stud)  ---> { name: 'Hari', marks: { math: 50, eng: 85 } }
+// console.log(stu) - Original hasn't changed --> { name: 'Hari', marks: { math: 90, eng: 85 } }
+
+
+// 22. Object.assign + Nested Trap  --> Predict:
+// const user1 = {
+//   name:"Rohit",
+//   address:{ city:"Pune" }
+// };
+// const user2 = Object.assign({}, user1);
+// console.log(user2)  -->{ name: 'Rohit', address: { city: 'Pune' } }
+// user2.address.city = "Mumbai";
+// console.log(user2.address.city); ---> Mumbai
+// user2.name = "Mohit"
+// console.log(user1); ---> { name: 'Rohit', address: { city: 'Mumbai' } }
+// so it is a shallow copy, only outside nested changes 
+
+
+
+// 23. Spread Operator + Nested Trap -- Predict output :
+// const a = { x:1, nested:{ z:50 } };
+// const b = { ...a };
+// b.nested.z = 500;
+// console.log(a.nested.z);  --> 500
+
+
+// 24. Nested Object Destructuring + Rename
+// Extract pincode as pin and state as st from:
+// const profile = {
+//   address:{
+//     city:"Hyd",
+//     pincode:887766,
+//     state:"TS"
+//   }
+// };
+// const {address : {pincode : pin , state : st}} = profile
+// console.log(pin, st)  ---> 887766 TS
+
+
+// 25. Mixed Array + Object Destructuring -- Extract "JS" and 40:
+// const mix = {
+//   lang:["JS","Python","Java"],
+//   numbers:[10,20,30,40, [11,22], 50]
+// };
+// const {
+//     lang: [one],
+//     numbers : [,,,three ]
+// } = mix                       
+// console.log(one,three) //--> JS 40
+
+// now accessed Python and 22
+// const  {
+//     lang : [,two],
+//     numbers : [,,,,[,one]]  }  = mix 
+// console.log(two,one)         //--->   Python 22
+
+// 26. Prototype Chaining
+// Use prototype so user2 can access user1 properties:
+// let user1 = { city:"Delhi" };
+// let user2 = { name:"Ravi" };
+
+// user2.__proto__ = user1
+// console.log(user2.city,user2.name)  ---> Delhi Ravi
+
+
+// 27.Add a method to all objects that returns "Hello Prototype"
+// (use Object.prototype)
+
+// // Add a new method named 'sayHello' to Object.prototype
+// Object.prototype.sayHello = function() {
+//     return "Hello Prototype";
+// };
+// // 1. Regular Object
+// const user = { name: "Alice" };
+// console.log(user.sayHello()); // Output: Hello Prototype
+
+
+
+// // 2. Array Object
+// const data = [1, 2, 3];
+// console.log(data.sayHello()); // Output: Hello Prototype
+
+// // 3. Function Object
+// function greet() {}
+// console.log(greet.sayHello()); // Output: Hello Prototype
+
+// Hello Prototype
+// Hello Prototype
+// Hello Prototype
+
+// 28. Challenging Computed Properties
+// Predict:
+// let key1 = "score";
+// let key2 = 10;
+// const obj = {
+//   [key1]:"A+",
+//   [key2]:"Ten",
+//   true:"yes"
+// };
+// console.log(obj);  ---> { '10': 'Ten', score: 'A+', true: 'yes' }
+
+// 29. Destructure and Skip elements -- Extract only 1st & 4th values:
+// let arr = [99,80,70,60,50];
+// let [one,,,four] = arr
+// console.log(one,four) ---> 99 60
+
+// 30. Deep Copy + Modify Nested + Prove Original Unchanged
+// Use structuredClone to solve:
+// const prod = {
+//   id:1,
+//   details:{
+//     price:500,
+//     stock:30
+//   }};
+// const por = structuredClone(prod)
+// por.details.price = 50; 
+// console.log(prod) --> { id: 1, details: { price: 500, stock: 30 } }
+// console.log(por)  ---> { id: 1, details: { price: 50, stock: 30 } }
+
+                 
+                         
