@@ -1,453 +1,744 @@
-                 
-//                  OBJECTS - Revision
-// Perfect! 🎉
-// I’ll give you 30 PRODUCT-BASED interview questions (Easy, Medium, Hard) ONLY from the topics you studied:
-// ✔ Objects (creation, access)
-// ✔ Nested Objects
-// ✔ Delete / Modify
-// ✔ Object.assign
-// ✔ Spread operator
-// ✔ Shallow Copy vs Deep Copy
-// ✔ structuredClone
-// ✔ Destructuring (Object + Array + Nested)
-// ✔ Functions inside objects
-// ✔ __proto__ (Prototype)
-// ✔ Computed Properties
-// ✔ Why arrays are objects
-// ✔ Everything related to Object Basics
-// No DOM. Only OBJECTS.
-// No answers, only interview-style problem statements.
-// This makes it perfect revision + real interview simulation.
-// ________________________________________
-// ✅ EASY – 10 Questions
-// (Direct output, simple logic, property access)
-// 1. Basic Object Access
-// Create an object student with properties name, age, score. Print the score using both dot and bracket notation.
-// 2. Modify Properties
-// Given:
-// const emp = { name: "Aman", salary: 40000 };
-// Change the salary to 55000 and print final object.
-// 3. Delete a Property
-// Delete the property age from:
-// const user = { name: "Rohit", age: 25, city: "Mumbai" };
-// 4. Access Key With Space
-// Access "account balance" from this object:
-// const bank = {
-//   name: "Raj",
-//   "account balance": 5000
-// };
-// 5. Array Inside Object
-// Print the 3rd value from:
-// const info = { marks: [10, 20, 30, 40] };
-// 6. Object Inside Object
-// Print the pincode:
-// const user = { address: { city: "Pune", pincode: 442200 } };
-// 7. Create Object Using new Object()
-// Add 3 properties using dot notation.
-// 8. Object.keys() Output
-// What does this print?
-// const obj = { a:1, b:2 };
-// console.log(Object.keys(obj));
-// 9. Object.values() Output
-// Predict output:
-// Object.values({ lang:"JS", level:1 });
-// 10. Computed Property
-// What is the final object?
-// let role = "admin";
-// const obj = { [role]: "Rakesh" };
-// ________________________________________
+                                     //FUNCTION Revision
 
-
-// 1. Basic Object Access
-// Create an object student with properties name, age, score. Print the score using both dot and bracket notation.
-// let stu= {
-//     name : "Rohith",
-//     age : 55,
-//     score: 100
+// 10 Easy, 10 Medium, 10 Hard — based ONLY on the topics  learned.
+// ________________________________________
+// ✅ EASY (10 Questions)
+// Basic understanding of functions, parameters, return, arrow functions.
+// 1. Write a function square(num) that returns the square of a number.
+// 👉 Use normal function syntax.
+// 2. Convert the above function into an arrow function.
+// **3. Write a function that takes a name and prints:
+// "Hello, "**
+// (Default parameter should be "Guest")
+// 4. Create a function add(a, b) that returns the sum and store the result inside a variable called result. Print result.
+// 5. What is the output?
+// function test(a = 10, b = 5) {
+//   return a - b;
 // }
-// console.log(stu.score) ---> 100
-// console.log(stu["score"])  ---> 100
-
-// 2. Modify Properties Given:
-// const emp = { name: "Aman", salary: 40000 };
-// Change the salary to 55000 and print final object.
-// emp.salary = 55000
-// console.log(emp)  --> { name: 'Aman', salary: 55000 }
-
-
-// 3. Delete a Property --> Delete the property age from:
-// const user = { name: "Rohit", age: 25, city: "Mumbai" };
-// delete(user.age)
-// console.log(user) ---> { name: 'Rohit', city: 'Mumbai' }
-
-// 4. Access Key With Space
-// Access "account balance" from this object:
-// const bank = {
-//   name: "Raj",
-//   "account balance": 5000
-// };
-// console.log(bank["account balance"]) ---> 5000
-// 5. Array Inside Object
-// Print the 3rd value from:
-// const info = { marks: [10, 20, 30, 40] };
-// console.log(info.marks[3])  ---> 40
-
-// 6. Object Inside Object modify and print the pincode:
-// const user = { address: { city: "Pune", pincode: 442200 } };
-// user.address.pincode = 500
-// console.log(user.address.pincode)  --> 500
-
-// 7. Create Object Using new Object()
-// Add 3 properties using dot notation.
-// let person = new Object();
-// person.name = "Rohith",
-// person.age = 62,
-// person.city = "Mumbai",
-// person.age = 22
-// console.log(person)  --> { name: 'Rohith', age: 22, city: 'Mumbai' }
-
-// 8. Object.keys() Output
-// What does this print?
-// const obj = { a:1, b:2 };
-// console.log(Object.keys(obj));  --> [ 'a', 'b' ]
-
-// 9. Object.values() Output Predict output:
-// Object.values({ lang:"JS", level:1 });  ---> JS 1 
-
-
-
-// 10. Computed Property What is the final object?
-// let role = "admin";
-// const obj = { [role]: "Rakesh" };
-// console.log(obj)  ---> { admin: 'Rakesh' }
-
-
-// ✅ MEDIUM – 10 Questions
-// (Destructuring, spread, assign, nested access, shallow copies)
-// 11. Object Destructuring
-// Extract name & state from:
-// const p = { name:"Kavi", city:"Chennai", state:"TN" };
-// 12. Destructuring With Renaming
-// Rename:
-// name→fullName, city→town
-// 13. Spread Operator Merge
-// Merge using spread:
-// let a = { x:1, y:2 };
-// let b = { z:3 };
-// 14. Object.assign
-// Copy obj1 + obj2 into a new object:
-// let obj1 = { a:10 };
-// let obj2 = { b:20 };
-// 15. Shallow Copy Behavior
-// Predict output:
-// let p1 = { a: 10, nested: { x:1 } };
-// let p2 = p1;
-// p2.nested.x = 100;
-// console.log(p1.nested.x);
-
-
-// 16. Nested Destructuring
-// Extract doorno from:
-// const house = { 
-//   address: { city:"Delhi", doorno:55 }
-// };
-// 17. Array Destructuring Inside Object
-// Extract 1st and 3rd number:
-// const data = { arr:[50, 60, 70, 80] };
-// 18. Rest Operator in Object
-// Split:
-// const emp = { name:"Rohan", age:25, city:"Goa", salary:30000 };
-// Extract name, and store remaining in a new object.
-// 19. Function Inside Object
-// Call the function:
-// const machine = {
-//   start: function() { return "Machine Started"; }
-// };
-// 20. Why Array typeof is Object
-// Print the type and access a value using bracket like object.
-// ________________________________________
-
-// 11. Object Destructuring Extract name & state from:
-// const p = { name:"Kavi", city:"Chennai", state:"TN" };
-// const { name,state} = p
-// console.log(name,state) --> Kavi TN
-
-// 12. Destructuring With Renaming
-// Rename: name→fullName, city→town
-//  const p = { name:"Kavi", city:"Chennai", state:"TN" };
-// const { name : fullName, city : town  } = p
-// console.log(fullName, town)  --> Kavi Chennai
-
-//  13. Spread Operator Merge --> Merge using spread:
-// let a = { x:1, y:2 };
-// let b = { z:3 };
-// let c = {...a,...b } 
-// console.log(c) --> { x: 1, y: 2, z: 3 }
-
-// 14. Object.assign Copy obj1 + obj2 into a new object:
-// let obj1 = { a:10 };
-// let obj2 = { b:20 };
-
-// let obj3 = Object.assign(obj1,obj2)
-// console.log(obj3)  --> { a: 10, b: 20 }
-// I wanted to know how can we use array's values in spread 
-
-// let obj1 = [10];
-// let obj2 = [20, 30];
-
-// // The target is a new empty array literal []
-// // obj1 and obj2 are the source objects
-// let result = Object.assign([], obj1, obj2);
-
-// console.log(result);    --->  [20, 30]
-// console.log(result.length);   --->  2
-
-
-
-// 15. Shallow Copy Behavior  Predict output:
-// let p1 = { a: 10, nested: { x:1 } };
-// let p2 = p1;
-// p2.nested.x = 100;
-// console.log(p1); --> { a: 10, nested: { x: 100 } }
-// console.log(p2)  --> { a: 10, nested: { x: 100 } }
-
-// 16. Nested Destructuring -- Extract doorno from:
-// const house = { 
-//   address: { city:"Delhi", doorno:55 }
-// };
-// console.log(house.address.doorno) --> 55
-
-
-
-// 17. Array Destructuring Inside Object -- Extract 1st and 3rd number:
-// const data = { arr:[50, 60, 70, 80] };
-// const { arr : [one, , three ]} = data;
-// console.log(one,three) ---> 50 70
-
-// 18. Rest Operator in Object Split:
-// Extract name, and store remaining in a new object.
-// const emp = { name:"Rohan", age:25, city:"Goa", salary:30000 };
-
-// const {name, ...emp2} = emp
-// console.log(name,emp2)  ---> Rohan { age: 25, city: 'Goa', salary: 30000 }
-
-
-// 19. Function Inside Object  -- Call the function:
-// const machine = {
-//   start: function() { return "Machine Started"; }
-// };
-// console.log(machine.start()); --> Machine Started
-
-
-// 20. Why Array typeof is Object
-// Print the type and access a value using bracket like object.
-// const myArray = ["apple", "banana", "cherry"];
-
-// Print the type
-// console.log(typeof myArray); // Output: object
-//  console.log(myArray[1]);     // Output: banana
-
-
-
-// ✅ HARD – 10 Questions
-// (Deep vs Shallow copy with nested objects, prototype chain, trick-based destructuring, structuredClone, computed keys logic)
-// 21. Deep Copy Using structuredClone
-// Copy this object deeply and modify marks.math so original doesn't change:
-// const student = {
-//   name:"Hari",
-//   marks:{ math:90, eng:85 }
-// };
-// 22. Object.assign + Nested Trap
-// Predict:
-// const user1 = {
-//   name:"Rohit",
-//   address:{ city:"Pune" }
-// };
-// const user2 = Object.assign({}, user1);
-// user2.address.city = "Mumbai";
-// console.log(user1.address.city);
-// 23. Spread Operator + Nested Trap
-// Predict:
-// const a = { x:1, nested:{ z:50 } };
-// const b = { ...a };
-// b.nested.z = 500;
-// console.log(a.nested.z);
-// 24. Nested Object Destructuring + Rename
-// Extract pincode as pin
-// and state as st from:
-// const profile = {
-//   address:{
-//     city:"Hyd",
-//     pincode:887766,
-//     state:"TS"
-//   }
-// };
-// 25. Mixed Array + Object Destructuring
-// Extract "JS" and 40:
-// const mix = {
-//   lang:["JS","Python","Java"],
-//   numbers:[10,20,30,40]
-// };
-// 26. Prototype Chaining
-// Use prototype so user2 can access user1 properties:
-// let user1 = { city:"Delhi" };
-// let user2 = { name:"Ravi" };
-// 27. Create Your Own Prototype Method
-// Add a method to all objects that returns "Hello Prototype"
-// (use Object.prototype)
-// 28. Challenging Computed Properties
-// Predict:
-// let key1 = "score";
-// let key2 = 10;
-// const obj = {
-//   [key1]:"A+",
-//   [key2]:"Ten",
-//   true:"yes"
-// };
-// console.log(obj);  
-
-// 29. Destructure and Skip elements
-// Extract only 1st & 4th values:
-// let arr = [99,80,70,60,50];
-// 30. Deep Copy + Modify Nested + Prove Original Unchanged
-// Use structuredClone to solve:
-// const prod = {
-//   id:1,
-//   details:{
-//     price:500,
-//     stock:30
-//   }
-// };
+// console.log(test());
+// console.log(test(20));
+// 6. Write a function expression (store function in a variable) called sayHi that prints "Hi!". Call it.
+// 7. Write an arrow function that cubes a number (x³). No curly braces, no return keyword.
+// 8. Write a function that receives an object and prints its name and age.
+// 9. Destructure the object inside function parameters and print only city and country.
+// 10. Create a function runTwice(fn) that calls a function two times. Test by passing a function printing "Hey!".
 // ________________________________________
 
 
-// 21. Deep Copy Using structuredClone
-// Copy this object deeply and modify marks.math so original doesn't change:
-// const stu = {
-//   name:"Hari",
-//   marks:{ math:90, eng:85 }
-// };
-// console.log(stu) ---> { name: 'Hari', marks: { math: 90, eng: 85 } }
-// const stud = structuredClone(stu)
-// stud.marks.math = 50;
-// console.log(stud)  ---> { name: 'Hari', marks: { math: 50, eng: 85 } }
-// console.log(stu) - Original hasn't changed --> { name: 'Hari', marks: { math: 90, eng: 85 } }
+
+// 1. Write a function square(num) that returns the square of a number. 👉 Use normal function syntax.
+// function ok(num){
+//     return num * num;
+// }
+// console.log(ok(4)) ---> 16
+
+// 2. Convert the above function into an arrow function.
+// let arrow = (num) => num * num;
+// console.log(arrow(4)) ---> 16
+
+// 3. Write a function that takes a name and prints:
+// "Hello, "** (Default parameter should be "Guest")
+
+// function greet(guest){
+//     console.log("Hello," , guest  )
+// }
+// greet("Rohith"); ---> Hello, Rohith  
+// greet("Mohan")   --> Hello, Mohan
+// 4. Create a function add(a, b) that returns the sum and
+//     store the result inside a variable called result. Print result.
+
+//     function add(a,b){
+//         return a +b;
+//     }
+//     let result = add(2,2);
+//     console.log(result);   ---> 4
+ 
+// 5. What is the output?
+// function test(a = 10, b = 5) {
+//   return a - b;
+// }
+// console.log(test());  ---> 5
+// console.log(test(20)); ---> 15
+
+// 6. Write a function expression (store function in a variable
+// called sayHi that prints "Hi!". Call it.
+
+// let sayhi= function () {
+//     console.log("Hi!!");
+// }
+// sayhi(); --> Hi!!
 
 
-// 22. Object.assign + Nested Trap  --> Predict:
-// const user1 = {
-//   name:"Rohit",
-//   address:{ city:"Pune" }
-// };
-// const user2 = Object.assign({}, user1);
-// console.log(user2)  -->{ name: 'Rohit', address: { city: 'Pune' } }
-// user2.address.city = "Mumbai";
-// console.log(user2.address.city); ---> Mumbai
-// user2.name = "Mohit"
-// console.log(user1); ---> { name: 'Rohit', address: { city: 'Mumbai' } }
-// so it is a shallow copy, only outside nested changes 
+// 7. Write an arrow function that cubes a number (x³). No curly braces, no return keyword.
+
+// let cube = (x) => x* x * x
+// console.log(cube(5)) ---> 125
+
+
+// 8. Write a function that receives an object and prints its name and age.
+
+// let obj = {
+//     name : "Rohith",
+//     age : 25,
+//     city : "Mumbai"
+// }
+
+// function fun({name, age}){
+//     console.log(name,age)
+// }
+// fun(obj);  //---> Rohith 25
+
+
+// 9. Destructure the object inside function parameters and print only city and country.
+
+// let fun = {
+//     city : "Mumbai",
+//     state : "Maharashtra"  
+// }
+ 
+// function obj ({city,state}){
+//     console.log(city,state)
+// }
+
+// obj(fun) ---> Mumbai Maharashtra
+
+
+// ✅ MEDIUM (10 Questions)
+// Involving callbacks, rest operator, pure/impure, closures, higher order functions.
+// **11. Write a HOF applyOperation(a, b, operation)
+// where operation is a function (add, subtract, etc.).**
+// Call:
+// applyOperation(5, 5, function(x,y){ return x+y; })
+
+// **12. Create a function using REST operator sumAll(...nums)
+// that returns the total of all numbers passed.**
+// 13. What is the output?
+// let a = 10;
+// function increase() {
+//   a++;
+// }
+// increase();
+// increase();
+// console.log(a);
+// (Explain pure or impure)
+// 14. Write a pure function multiply(a, b) and prove it is pure.
+// 15. Write a closure function counter() that returns an inner function which increments a private count variable.
+// Example:
+// const c = counter();
+// c(); // 1
+// c(); // 2
+// 16. Write an IIFE that prints "JS Developer"
+// 17. Given the object:
+// let student = { name: "Aman", marks: 90, city: "Delhi" };
+// Write a function that returns only marks and city.
+// 18. Convert this to arrow function:
+// function greetUser(name) {
+//   return "Hello " + name;
+// }
+// **19. Write a function executeNTimes(fn, n)
+// that executes fn exactly n times.**
+// 20. Create a function that accepts another function and an array, and calls the function on each element (forEach manually).
+// ________________________________________
+
+// 11. Write a HOF applyOperation(a, b, operation)
+// where operation is a function (add, subtract, etc.).**
+// Call:
+// applyOperation(5, 5, function(x,y){ return x+y; })
+// Ans starts 
+
+// function applyOperation(a, b, operation){
+//     return operation(a, b);
+// }
+// console.log(applyOperation(5, 5, function(x, y){
+//     return x + y;
+// })); ---> 10
+
+// Execution Flow:applyOperation receives these arguments.It
+// executes: return operation(a, b);This translates to: return
+// (function(x, y) { return x + y; })(5, 5);The anonymous function
+// adds $5$ and $5$.The anonymous function returns 10.
 
 
 
-// 23. Spread Operator + Nested Trap -- Predict output :
-// const a = { x:1, nested:{ z:50 } };
-// const b = { ...a };
-// b.nested.z = 500;
-// console.log(a.nested.z);  --> 500
+// 12. Create a function using REST operator sumAll(...nums)
+// that returns the total of all numbers passed.
+
+// function sumAll(...num){
+
+// return num.reduce((acc,val)=> acc + val ,0)
+
+// }
+// console.log(sumAll(1,2,3,4,5)) ---> 15
 
 
-// 24. Nested Object Destructuring + Rename
-// Extract pincode as pin and state as st from:
-// const profile = {
-//   address:{
-//     city:"Hyd",
-//     pincode:887766,
-//     state:"TS"
+// I tried the same sum with map, but it didn't give me the sum of all values
+
+// function sum(...num){
+    
+//     return num.map((val) => val + val)
+// }
+// console.log(sum(1,2,3,4,5));   - [ 2, 4, 6, 8, 10 ]
+
+// Why map() Doesn't Work for Summation
+// The map() method is designed for transformation, not
+// aggregation.
+
+// Rest Operator: When you call sum(1, 2, 3, 4, 5),
+// the rest operator (...num) correctly turns the arguments into 
+// an array: num is [1, 2, 3, 4, 5].map()
+
+// Action: The map() method iterates through every element in the
+// array and applies the callback function (val => val + val).
+
+// Result: It creates a new array where each element is the
+// original element added to itself (doubled):$1 \rightarrow 1 + =
+// 2$$2 \rightarrow 2 + 2 = 4$
+
+// I asked ai this 
+// The map() method iterates through every element in the array
+// and applies the callback function so the reduce method
+// isn't applying callback function ?
+
+// That's a very insightful question that gets right to the core difference between JavaScript's array methods!
+
+// The short answer is: No, it's not that reduce() doesn't apply a callback function; it's that it applies the callback for a fundamentally different purpose than map().
+
+// Both map() and reduce() are Higher-Order Functions and both iterate through every element in the array and apply a callback function.
+
+// The Key Difference in Callback Purpose
+// The difference lies in what the callback function is expected to return and what the final method returns.
+// 1. map(): Transformation (One-to-One)
+// Parameter Tested	map()
+// Callback Goal	To transform the current element.
+// Callback Return	The new value for that element.
+// Method Return	A new array of the exact same length, containing all the transformed values.
+// Example	[1, 2, 3].map(x => x * 2) returns [2, 4, 6].
+
+// So if we want exact same length of transformed values then we can use map
+
+// 14. Write a pure function multiply(a, b) and prove it is pure.
+
+// function mul(a,b){
+//     return a * b
+// }
+// console.log(mul(5,2)) ---> 10
+
+// 15. Write a closure function counter() that returns an inner function which increments a private count variable.
+// Example:
+// const c = counter();
+// c(); // 1
+// c(); // 2
+
+// const c = function counter(){
+//     let value = 20;
+
+//  function val(){
+//      value++
+//         console.log(value)
+//     }
+//     return val
+// }
+// let res = c();
+// res()  21
+// res()  22
+// res()  23
+
+// 16. Write an IIFE that prints "JS Developer"
+
+// (function (){
+//     console.log("JS Developer")
+// }
+// ()) ---> JS Developer
+
+
+// 17. Given the object:
+// let student = { name: "Aman", marks: 90, city: "Delhi" };
+// Write a function that returns only marks and city.
+// let student = {
+//     name: "Aman",
+//     marks: 90,
+//     city: "Delhi" };
+    
+//     function fun(obj){
+//         console.log(obj.marks, obj.city) 
+//     }
+// fun(student) ---> 90 Delhi
+
+
+// 18. Convert this to arrow function:
+// function greetUser(name) {
+//   return "Hello " + name;
+// }
+
+// let greet = (name) => "Hello "+ name
+// console.log(greet("Rohith "))  ---> Hello Rohith 
+
+
+// 19. Write a function execute(fn, n) that executes fn exactly n times.
+// function execute(fn,n){
+//     for(let i = 0; i < n; i++){
+//     fn();
+// }}
+// execute ( () => console.log("Hello"),3);
+// Hello
+// Hello
+// Hello
+
+// Code Line	Type	Explanation
+// function execute(fn, n){	Function Header	This defines a function named execute. It's a Higher-Order Function because it accepts another function as an argument (fn). It takes two parameters: fn (a function to be executed) and n (the number of times to execute it).
+// for(let i = 0; i < n; i++){	Loop Start	This initiates a standard for loop. The loop variable i starts at 0, continues as long as i is less than the value of n, and increments i by 1 after each iteration. This ensures the loop runs exactly n times.
+// fn();	Execution	This is the core action. It calls the function that was passed into execute (the callback function). This line executes once per loop iteration.
+// }	Loop End	Closes the body of the for loop.
+// }	Function End	Closes the body of the execute function.
+
+
+// Code Line	Type	Explanation
+// execute ( () => console.log("Hello"), 3 );	Function Call	This executes the execute function with two arguments:
+// ()		Argument 1 (fn): An anonymous arrow function that prints the string "Hello" to the console. This is the callback function.
+// 3		Argument 2 (n): The number 3.
+
+
+
+
+// 20. Create a function that accepts another function and an
+// array, and calls the function on each element (forEach manually
+// ).
+// function myForEach(arr, fn){
+//     for(let i = 0; i < arr.length; i++){
+//         fn(arr[i]);
+//     }
+// }
+// myForEach([1,25,45,"Jerry", "Tom","true"], (x) => console.log(x));
+// Ans- 
+// 1
+// 25
+// 45
+// Jerry
+// Tom
+// true
+
+// Explanation
+
+// Code Line	Type	Explanation
+// function myForEach(arr, fn){	Function Header	This defines a function named myForEach. It's a Higher-Order Function because it accepts another function as an argument (fn). It takes two parameters: arr (the array to iterate over) and fn (the function to be executed for each element).
+// for(let i = 0; i < arr.length; i++){	Loop Start	This initiates a standard for loop. It iterates from index 0 up to, but not including, the length of the array (arr.length). This ensures every element in the array is visited exactly once.
+// fn(arr[i]);	Execution	This is the core action. In each iteration, it calls the function passed as fn (the callback function), providing the current array element (arr[i]) as an argument.
+// }	Loop End	Closes the body of the for loop.
+// }	Function End	Closes the body of the myForEach function.
+
+// Code Line	Type	Explanation
+// myForEach([1, 2, 3], (x) => console.log(x));	Function Call	This executes the myForEach function with two arguments:
+// [1, 2, 3]		Argument 1 (arr): The array that will be iterated.
+// (x) => console.log(x)		Argument 2 (fn): An anonymous arrow function that takes one parameter x and prints its value to the console. This is the callback function.
+
+
+// function myForEach(arr, fn){
+//     for(let i = 0; i < arr.length; i++){
+//         fn(arr[i]);
+//     }
+// }
+// myForEach([10, 20, 30], function(num){
+//     console.log(num);
+// });
+
+// -----------------------------------------------------------------------
+// function myForeach(arr, callback){
+//     for(let i = 0; i<arr.length; i++){
+//         callback(arr[i],i)
+//     }
+// }
+// const arrval = [10,"Bheem", 20];
+
+// myForeach(arrval, function (val, ind){
+//     console.log(val,ind)
+// });
+// Ans
+// 10 0
+// Bheem 1
+// 20 2
+
+// This single line tells the myForEach function: -         callback(arr[i],i)
+// 1.	"Take the function I received (the callback)."
+// 2.	"Execute it on the current item."
+// 3.	"Provide two pieces of data to that function: the value of the element (arr[i]) and its index (i)."
+// function myForeach(arr, callback){
+//         callback(arr[i],i)
+// myForeach(arrval, function (val, ind){
+//     console.log(val,ind)
+// });
+
+// What is the High Order function is that, it takes another function as an argument to pass their parameters, in the above sum it is 2 parameters, arr, callback 
+// Arr is ok, we have defined it in array
+// 2nd callback parameter in the next line itself we're calling it and adding it arr[i],i is actually what we define in val and index 
+
+// If avoiding the HOF pattern, you rewrite a new function each time for different behaviors:
+
+
+
+// Side-by-Side Comparison
+// Using the same applyOperation example, here's the difference between rewriting without HOF versus reusing one HOF.
+// Without HOF (Rewrite Each Time)
+// Create a new function for every operation:
+// Javascript 
+// // Rewrite 1: For doubling
+// function doubleNum(num) {
+//     return num * 2;
+// }
+// console.log(doubleNum(5)); // 10
+
+// // Rewrite 2: For squaring
+// function squareNum(num) {
+//     return num * num;
+// }
+// console.log(squareNum(5)); // 25
+
+// // Rewrite 3: For incrementing
+// function incrementNum(num) {
+//     return num + 1;
+// }
+// console.log(incrementNum(5)); // 6
+// Each function duplicates the input-output structure.
+// With HOF (Single Function, No Rewriting)
+// Define the HOF once, pass different operations:
+// javascript
+// function applyOperation(num, operation) {
+//     return operation(num);
+// }
+
+// const double = function(x) {return x * 2}
+// const square = x => x * x;
+// const increment = x => x + 1;
+
+// console.log(applyOperation(5, double));     // 10
+// console.log(applyOperation(5, square));     // 25
+// console.log(applyOperation(5, increment));  // 6
+// The HOF applyOperation remains identical; only the passed function changes, avoiding repeated code.
+
+// I asked Ai this --
+// isn't HOF looks like First class function, that is also lke you don't need to write again and again
+
+// First-Class vs Higher-Order Functions
+// First-class functions and higher-order functions (HOF) are related but distinct: JavaScript treats all functions as first-class citizens, meaning they can be assigned to variables, passed as arguments, or returned like any value. HOFs build on this by specifically taking functions as arguments or returning them.geeksforgeeks+1
+// Key Differences
+// Aspect	First-Class Functions	Higher-Order Functions
+// Definition	Functions treated as values (assignable, passable, returnable)	Functions that operate on other functions (accept or return them)
+// Example	const fn = x => x*2; (assigned to variable)	applyOperation(5, fn) (HOF accepts function)
+// Requirement	Language feature (JS supports it)	Depends on first-class support geeksforgeeks
+
+
+// Why They Look Similar
+// Both avoid rewriting by reusing functions, but first-class is the capability (e.g., storing double in a variable), while HOF is the usage (e.g., applyOperation calling the passed function). Without first-class functions, HOFs couldn't exist—double must be passable first.javascript.plainenglish+1
+// In the example, double is first-class (stored as value), and applyOperation is HOF (uses it as argument). This combo enables the no-rewrite benefit.geeksforgeeks
+
+// Key Difference: Reference vs. Value
+// •	Function reference passed: double is the function; calling applyOperation(5, double) sends the function to be invoked later with num.
+// •	Not a variable value: If it were applyOperation(5, 10), operation would receive the number 10, causing an error when operation(5) tries to call a number as a function.
+// •	Proof it works: The HOF executes double(5) internally, proving the function was passed and used with parameters.
+
+
+
+
+
+// function myForEach(arr, fn){
+//     for(let i = 0; i < arr.length; i++){
+//         fn(arr[i]);
+//     }
+// }
+// myForEach([10, 20, 30], function(num){
+//     console.log(num);
+// });  ---> 10 20 30 
+
+// Above the method is hard written manual foreach as we wrote the values in arguments
+// Below one is already given in let so we neatly implememtned HOF and callback accessed and returned in 
+
+// let are = [10,20,30,"KO"];
+
+// function apply(ary,fn){
+// for(let i =0; i<are.length; i++){    
+//     fn(ary[i]) //--> Pass the element at the current index (ary[i])
+// }}
+// apply(are,function (x){
+//     console.log(x)
+// }) ---> 10 20 30 KO
+
+// const myArray = [10, 20, 30];
+
+// // This is the standard, non-manual way:
+// myArray.forEach(function(num,ind) {
+//     console.log(num,ind);
+// });   // Output: 10 0, 20 1, 30 2
+
+
+// ________________________________________
+// ✅ HARD (10 Questions)
+// Closure-heavy, callback logic, HOF logic, real interview–style.
+// 21. Create a function createAdder(x) that returns a new function adding x to any number.
+// Example:
+// const add10 = createAdder(10);
+// console.log(add10(5)); // 15
+// 22. Implement your own .filter() using a Higher Order Function.
+// Function name: myFilter(arr, fn).
+// **23. Use rest operator to build a function findMax(...nums)
+// WITHOUT using Math.max().**
+// 24. What is the output? Explain closure + lexical environment.
+// function outer() {
+//   let count = 1;
+//   return function() {
+//     count++;
+//     console.log(count);
 //   }
+// }
+// const fn = outer();
+// fn();
+// fn();
+// fn();
+// **25. Write a HOF compose(f, g)
+// that returns a new function:
+// compose(f, g)(x) → f(g(x)).
+// 26. Write a function that takes an object and returns a NEW modified object without changing the original (pure function requirement).
+// **27. Implement a function once(fn)
+// that allows a function to run only one time.
+// Example:
+// const helloOnce = once(() => console.log("Hello"));
+// helloOnce(); // prints
+// helloOnce(); // does nothing
+// 28. Convert this normal function to a fully minimized arrow function:
+// function area(length, width) {
+//   return length * width;
+// }
+// 29. Use destructuring in parameters + rest operator together:
+// Write a function:
+// function logUser({name, ...rest}) { ... }
+// Print name and rest.
+// **30. HARD: Write a function createBank(balance)
+// that returns deposit() and withdraw() functions using closure.**
+// Example:
+// const bank = createBank(1000);
+// bank.deposit(500);  // 1500
+// bank.withdraw(200); // 1300
+
+
+// function add(x,y=10){
+//     return x + y
+// }
+// console.log(add(5))  15 console.log(add(6))   16 console.log(add(7))  17
+
+// 21. Create a function createAdder(x) that returns a new function adding x to any number.
+// Example: const add10 = createAdder(10); console.log(add10(5)); // 15
+// function createAdder(x){
+//     return function(y){
+//         return x + y
+//     }
+// }
+// const add10 = createAdder(10);
+// console.log(add10(5))  //---> 15
+
+// const add50 = createAdder(2);
+// console.log(add50(50)) ---> 52
+
+// 22. Implement your own .filter() using a Higher Order Function.
+// Function name: myFilter(arr, fn).
+
+// function myFilter(arr,fun){
+//     let result = [];
+// for(let i = 0; i < arr.length; i++){
+//     if (fun(arr[i])) {
+//         result.push(arr[i]); 
+//     }
+// }    return result;     
+// } 
+
+// console.log(myFilter([10,20,30,40,50,60], (x) => x>20));
+// [ 30, 40, 50, 60 ]
+
+// Starting with defining the array and then filtering it 
+// let arr = [10,20,30,40,50,60];
+// let result = [];
+// function filt(ary , val){
+// for(let i =0; i<arr.length; i++){
+//     if(val(ary[i])){
+//         result.push(ary[i])   }} 
+// return result
+//  } 
+// let res = filt(arr, function (x){
+//    return x > 20; 
+// });
+// console.log(res)  ---> [ 30, 40, 50, 60 ]
+
+
+// 23. Use rest operator to build a function findMax(...nums)
+// WITHOUT using Math.max().**
+
+
+// Values writing in the ans of highorder method, 
+
+
+// function findmax(...num){
+    
+//     return num.reduce((acc, val)=>{
+//          return val > acc ? val : acc 
+//     });
+// }
+// console.log(findmax(21,54,87,63)) ---> 87
+
+
+// let abc = [ 21,54,87,63 ];
+
+// let res = abc.reduce((acc, val) => {
+// return val > acc ? val : acc;
+
+// })
+// console.log(res) --->  87
+
+
+// let abc = [ 21,54,87,63 ];
+// let res = abc.reduce((acc, val) => {
+//     if( val > acc){
+//     return   val                
+// } else {
+//     return acc
+// }
+// })
+
+// console.log(res)  -->  87
+
+// 24. What is the output? Explain closure + lexical environment.
+// function outer() {
+//   let count = 1;
+//   return function() {
+//     count++;
+//     console.log(count);
+//   }
+// }
+// const fn = outer();
+// fn(); 2
+// fn(); 3
+// fn(); 4
+
+
+// 25. Write a HOF compose(f, g) that returns a new function:
+// compose(f, g)(x) → f(g(x)).
+
+
+// function compose(f, g){
+//     return function(x){
+//         return f(g(x));
+//     }
+// }
+
+// // Example:
+// const add2 = x => x + 2;
+// const mul3 = x => x * 3;
+
+// console.log(compose(add2, mul3)(5)); // 17
+
+
+
+// 26. Write a function that takes an object and returns a NEW modified object without changing the original (pure function requirement).
+// const user = {
+//     name: "Alex",
+//     age: 30,
+//     city: "SF"
 // };
-// const {address : {pincode : pin , state : st}} = profile
-// console.log(pin, st)  ---> 887766 TS
+// function modifyUser(obj){
+//     return {
+//         ...obj,          // 1. Copies ALL properties from the original
+//                                 //'obj' into a new object.
+//         age: obj.age + 1 // 2. OVERWRITES the 'age' property with the 
+//                                     //new value.
+//     };
+// }
+// // Call the pure function
+// const updatedUser = modifyUser(user);
+
+// console.log(updatedUser); 
+// // Output: { name: "Alex", age: 31, city: "SF" }
+
+// console.log(user); 
+// // Output: { name: "Alex", age: 30, city: "SF" } 
+// // The original object is UNCHANGED (pure function achieved).
+
+// { name: 'Alex', age: 31, city: 'SF' }
+// { name: 'Alex', age: 30, city: 'SF' }
 
 
-// 25. Mixed Array + Object Destructuring -- Extract "JS" and 40:
-// const mix = {
-//   lang:["JS","Python","Java"],
-//   numbers:[10,20,30,40, [11,22], 50]
-// };
-// const {
-//     lang: [one],
-//     numbers : [,,,three ]
-// } = mix                       
-// console.log(one,three) //--> JS 40
+// **27. Implement a function once(fn) that allows a function to run only one time.
+// Example:
+// const helloOnce = once(() => console.log("Hello"));
+// helloOnce(); // prints
+// helloOnce(); // does nothing
+// function once(fn){
+//     let called = false;
+//     return function(){
+//         if(!called){
+//             called = true;
+//             return fn();
+//         }
+//     };
+// }
 
-// now accessed Python and 22
-// const  {
-//     lang : [,two],
-//     numbers : [,,,,[,one]]  }  = mix 
-// console.log(two,one)         //--->   Python 22
+// const sayHello = () => console.log("Hello, World!");
+// const helloOnce = once(sayHello);
 
-// 26. Prototype Chaining
-// Use prototype so user2 can access user1 properties:
-// let user1 = { city:"Delhi" };
-// let user2 = { name:"Ravi" };
-
-// user2.__proto__ = user1
-// console.log(user2.city,user2.name)  ---> Delhi Ravi
+// helloOnce(); // Output: Hello, World! (Execution happens here)
+// helloOnce(); // Output: (Nothing happens)
+// helloOnce(); // Output: (Nothing happens)
 
 
-// 27.Add a method to all objects that returns "Hello Prototype"
-// (use Object.prototype)
+// 28. Convert this normal function to a fully minimized arrow function:
+// function area(length, width) {
+//   return length * width;
+// }
 
-// // Add a new method named 'sayHello' to Object.prototype
-// Object.prototype.sayHello = function() {
-//     return "Hello Prototype";
-// };
-// // 1. Regular Object
-// const user = { name: "Alice" };
-// console.log(user.sayHello()); // Output: Hello Prototype
+// const area = (l, w) => l * w;
+// const area = (length, width) => length * width;
+
+// console.log(area(5, 10));  // 50
+
+// 29. Use destructuring in parameters + rest operator together:
+// Write a function:
+// function logUser({name, ...rest}) { ... } Print name and rest.
+
+// function logUser({ name, ...rest }){
+//     console.log(name);
+//     console.log(rest);
+// }
+
+// logUser({
+//     name: "Rohit",
+//     age: 20,
+//     city: "Chennai",
+//     role: "Developer"
+// });
+// Rohit
+// { age: 20, city: 'Chennai', role: 'Developer' }
+
+
+// 30. HARD: Write a function createBank(balance)
+// that returns deposit() and withdraw() functions using closure.
+
+// Example:
+// const bank = createBank(1000);
+// function createBank(balance){
+//     return {
+//         deposit(amount){
+//             balance += amount;
+//             console.log(balance);
+//         },
+//         withdraw(amount){
+//             balance -= amount;
+//             console.log(balance);
+//         }
+//     };
+// }
+
+// const bank = createBank(1000);
+
+// bank.deposit(500);   // 1500
+// bank.withdraw(200);  // 1300
+// bank.deposit(300);   // 1600
 
 
 
-// // 2. Array Object
-// const data = [1, 2, 3];
-// console.log(data.sayHello()); // Output: Hello Prototype
 
-// // 3. Function Object
-// function greet() {}
-// console.log(greet.sayHello()); // Output: Hello Prototype
-
-// Hello Prototype
-// Hello Prototype
-// Hello Prototype
-
-// 28. Challenging Computed Properties
-// Predict:
-// let key1 = "score";
-// let key2 = 10;
-// const obj = {
-//   [key1]:"A+",
-//   [key2]:"Ten",
-//   true:"yes"
-// };
-// console.log(obj);  ---> { '10': 'Ten', score: 'A+', true: 'yes' }
-
-// 29. Destructure and Skip elements -- Extract only 1st & 4th values:
-// let arr = [99,80,70,60,50];
-// let [one,,,four] = arr
-// console.log(one,four) ---> 99 60
-
-// 30. Deep Copy + Modify Nested + Prove Original Unchanged
-// Use structuredClone to solve:
-// const prod = {
-//   id:1,
-//   details:{
-//     price:500,
-//     stock:30
-//   }};
-// const por = structuredClone(prod)
-// por.details.price = 50; 
-// console.log(prod) --> { id: 1, details: { price: 500, stock: 30 } }
-// console.log(por)  ---> { id: 1, details: { price: 50, stock: 30 } }
-
-                 
                          
