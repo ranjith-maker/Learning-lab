@@ -1,129 +1,4 @@
-                                     //LOOPS Revision
-
-
-
-/**
- * 5️⃣ Amazon Cart Total (forEach + if)
- * Requirements:
- * 1. Calculate the total sum of prices.
- * 2. If any single item is more than 1000, print "Luxury Item Detected!".
- */
-
-// let sum = 0;
-// let items = [200, 500, 1200, 50, 999];
-// let luxuryDetected = false; // 🚩 A flag to track the luxury item
-
-// // 1. Use forEach to iterate, calculate sum, and check the condition
-// items.forEach((price) => {
-//     // Calculate the total sum
-//     sum += price;
-
-//     // Check the Luxury condition for the CURRENT item (price)
-//     if (price > 1000) {
-//         // Only set the flag, we don't need to print it multiple times
-//         luxuryDetected = true;
-//     }
-// });
-
-// // 2. Print the total sum (Required output)
-// console.log(`\n🛒 Cart Total: $${sum}`);
-
-// // 3. Print the warning AFTER the loop is finished (Required output)
-// if (luxuryDetected) {
-//     console.log("⚠️ Luxury Item Detected!");
-// }
-                         
-
-
-/**
- * 6️⃣ Instagram Username Validator (while + continue)
- * Requirements:
- * 1. No spaces
- * 2. At least 3 characters
- * 3. All lowercase
- * 4. Use 'continue' to reject bad inputs.
- */
-
-
-// console.log("Starting Username Validator...");
-// const username = ["ra", "ro hit", "Rohan", "aj", "mike", "sam", "anbu"];
-
-// let i = 0;
-
-// while (i < username.length) {
-//     const user = username[i];
-//     i++;
-
-//     if (user.includes(" ") || user.length < 3 || user !== user.toLowerCase()) {
-//         continue;
-//     }
-
-//     console.log("Valid Username:", user);
-// }
-
-
-
-
-// const usernames = ["ra", "ro hit", "Rohan", "aj", "mike", "sam", "anbu"];
-
-// let i = 0;
-
-// while (i < usernames.length) {
-//     const user = usernames[i];
-//     i++;
-
-//     // 1) Reject if it contains spaces
-//     if (user.includes(" ")) {
-//         continue;
-//     }
-
-//     // 2) Reject if shorter than 3 characters
-//     if (user.length < 3) {
-//         continue;
-//     }
-
-//     // 3) Reject if not all lowercase
-//     if (user !== user.toLowerCase()) {
-//         continue;
-//     }
-
-//     // If it passed all checks, print it
-//     console.log("Valid Username:", user);
-// }
-
-
-
-
-
-
-// // Instagram Username Prompt Validator - step-by-step checks (separate lines)
-// while (true) {
-//   const username = prompt("Enter a username:");
-
-//   // Check 1: No spaces
-//   if (username.includes(" ")) {
-//     alert("Invalid: username must not contain spaces.");
-//     continue;
-//   }
-
-//   // Check 2: At least 3 characters
-//   if (username.length < 3) {
-//     alert("Invalid: username must be at least 3 characters long.");
-//     continue;
-//   }
-
-//   // Check 3: All lowercase
-//   if (username !== username.toLowerCase()) {
-//     alert("Invalid: username must be all lowercase.");
-//     continue;
-//   }
-
-//   // If all checks pass, accept and stop prompting
-//   alert("Username accepted: " + username);
-//   console.log("Valid Username:", username);
-//   break;
-// }
-
+                      // IF, IF ELSE / CONDITIONS REVISION
 
 // 🚀 LEVEL 1 — Warm-up (Basic Logic, but Real Life)
 // 1️⃣ WhatsApp Login Attempts (while + break)
@@ -319,7 +194,6 @@
 // If found → print “Found at position X”.
 // Use for…of.
 
-
 // const contacts = ["Ravi", "Rakesh", "Rohit", "Ram", "Rahul"];
 // search = "Rohit"
 // for(let[index, val] of contacts.entries()){
@@ -355,4 +229,277 @@
 
 
 
+// 🚀 LEVEL 3 — Intermediate Product-Level
+// 9️⃣ Count frequency of every fruit (for in + object)
+// Given:
+// ["apple", "banana", "apple", "mango"]
+// Output:
+// { apple: 2, banana: 1, mango: 1 }
 
+// 🔟 Flipkart Discount Engine (if-else + switch)
+// Input coupon code:
+// •	SALE10 → 10%
+// •	SALE20 → 20%
+// •	WELCOME → ₹100 off
+// •	INVALID → show message
+// Use switch case.
+
+// 1️⃣1️⃣ Credit Score Evaluator (ternary operator)
+// If score > 750 → “Good”
+// Else → “Bad”
+// One-line ternary.
+
+// 1️⃣2️⃣ Detect First Negative Number (continue + break)
+// From an array, skip positive numbers.
+// Stop when you hit first negative.
+// ________________________________________
+
+
+
+// 9️⃣ Count frequency of every fruit (for in + object)
+// Given:
+// ["apple", "banana", "apple", "mango"]
+// Output:
+// { apple: 2, banana: 1, mango: 1 }
+
+// let fruits = ["apple", "banana", "apple", "mango"];
+
+// let grow = Object.groupBy(fruits, tree => tree)
+// let result = {};
+// for(let key in grow){
+//     result[key] = grow[key].length;
+// }
+// console.log(result)
+// { apple: 2, banana: 1, mango: 1 }
+
+// FOR Loop
+
+// let fruits = ["apple", "banana", "apple", "mango"];
+
+// let freq = {};
+// for(let i =0; i<fruits.length; i++){
+//     const fal = fruits[i]
+//     if(freq[fal]){
+//         freq[fal] += 1;
+// } else{
+//     freq[fal] = 1; 
+// } 
+//     }
+// console.log(freq) --> { apple: 2, banana: 1, mango: 1 }
+
+
+// 🔟 Flipkart Discount Engine (if-else + switch)
+// Input coupon code:
+// •	SALE10 → 10%
+// •	SALE20 → 20%
+// •	WELCOME → ₹100 off
+// •	INVALID → show message
+// Use switch case.
+
+
+// 🔟 Flipkart Discount Engine (if-else + switch)
+// Input coupon code:
+// •	SALE10 → 10%      SALE20 → 20%
+// •	WELCOME → ₹100 off  INVALID → show message
+// Use switch case.
+
+// let coupon = prompt("Enter the coupon code here").toUpperCase();
+// let amount = +prompt("Enter the total amount") 
+// let finalPrice;
+
+// switch(coupon) {
+//     case "SALE20" :
+//     finalPrice = amount - amount * 0.20;
+//     console.log(coupon,"Applied")
+// break;    
+//     case "SALE10" :
+//     finalPrice = amount - amount * 0.10;
+//     console.log(coupon, "Applied")
+// break;
+//     case  "WELCOME" :
+//     console.log(coupon, "Applied")    
+//     finalPrice = amount - 100;
+// break;
+// default :
+// console.log("Invalid coupon code")
+// finalPrice = amount ;   
+// }
+// console.log("Your final amount", finalPrice)
+
+// Enter the coupon code hereSALE20
+// Enter the total amount8640
+// SALE20 Applied
+// Your final amount 6912
+
+
+// 1️⃣1️⃣ Credit Score Evaluator (ternary operator)
+// If score > 750 → “Good” Else → “Bad” One-line ternary.
+
+// let mark = 500;
+// let score = mark < 750 ?  "Good" : "Bad"
+// console.log(score) Good
+
+
+
+// 1️⃣2️⃣ Detect First Negative Number (continue + break)
+// From an array, skip positive numbers.
+// Stop when you hit first negative.
+
+// let nos = [10,20,30,0,-54,-12,50,30]
+
+// for(let i = 0; i < nos.length; i++){
+//     if(nos[i] > 0 )
+//   {console.log(nos[i])
+//        continue;
+//   }
+//     if(nos[i] < 0) {
+// console.log(nos[i])
+// break;
+//  } 
+// } 
+// 10
+// 20
+// 30
+// -54
+// ---------
+//  LEVEL 4 seems DSA, will catch up later 
+// -----------
+// 🚀 LEVEL 5 — Hard / Product Company Style
+// 1️⃣6️⃣ ATM Simulator (loop + condition + break)
+// Withdraw until:
+// •	Balance ends
+// •	Or attempts exceed 3
+// •	Or user enters negative value
+// 1️⃣7️⃣ Password Strength Validator (while + continue)
+// Ask until:
+// •	min length 6
+// •	one number
+// •	one capital letter
+// •	one special char
+// Use continue for invalid attempts.
+// 1️⃣8️⃣ Order Tracking System (switch + loop)
+// Order status:
+// •	pending
+// •	packed
+// •	shipped
+// •	delivered
+// Switch-case for each status.
+// 1️⃣9️⃣ Print 1st 3 odd numbers WITHOUT modulo (%)
+// Product companies LOVE this.
+// 2️⃣0️⃣ Recursively remove all vowels from a string
+// Input: "javascript" → "jvscrpt"
+
+// -----
+
+// 1️⃣6️⃣ ATM Simulator (loop + condition + break)
+// Withdraw until:
+// •	Balance ends
+// •	Or attempts exceed 3
+// •	Or user enters negative value
+
+// let balance = 0;
+// let attempt = 0;
+
+// while( balance <= 1000 && attempt <= 3){
+// let ask = prompt("how much you want?")
+//    attempt++;
+//     if(ask > 1000){
+//         console.log("Account is empty")
+//         break;
+//     } else if( attempt ===3 ){
+//         console.log("Attempt is Over")
+//         break;
+//     } if(ask <= 0){
+//         console.log("enter positive values")
+//         break;
+//     } 
+//      balance -= ask;
+//     console.log("Succesfully withdrawn")
+// }
+
+// 1️⃣7️⃣ Password Strength Validator (while + continue)
+// Ask until:
+// •	min length 6
+// •	one number
+// •	one capital letter
+// •	one special char
+// Use continue for invalid attempts.
+
+// 1️⃣7️⃣ Password Strength Validator (while + continue)
+// Ask until:
+// •	min length 6
+// •	one number
+// •	one capital letter
+// •	one special char
+// Use continue for invalid attempts.
+
+
+// while(true){
+//     const ask = prompt("What is your password ?");
+//     if(ask.length < 6){
+//     alert("Password should have minimum 6 characters")
+//     continue;
+// }  if(!/[A-Z]/.test(ask)){
+//     alert("Password should have 1 capital letter")
+//     continue;
+// } if(!/[0-9]/.test(ask)){
+//     alert ("Password should have 1 numerical character")
+// continue;
+// } if(!/[!@#$%^&*(),.?":{}|<>]/.test(ask)){
+//     alert("Password should have 1 Special character")
+//     continue;
+// } console.log("Unlocked", ask);
+// break;
+// }
+
+// What is your password ?54531316541
+// Password should have 1 capital letter
+// What is your password ?kushediufkjBHeifd
+// Password should have 1 numerical character
+// What is your password ?A1fsghtyg
+// Password should have 1 Special character
+// What is your password ?"Nexus2"
+// Unlocked "Nexus2"
+
+
+
+// 1️⃣8️⃣ Order Tracking System (switch + loop)
+// Order status:
+// •	pending
+// •	packed
+// •	shipped
+// •	delivered
+// Switch-case for each status.
+
+
+
+// let statuses = ["Pending", "Packed","Shipped", "Delivered"];
+// for(let i = 0; i<statuses.length;i++){
+//    let status = (statuses[i])
+
+// switch(status){
+//     case "Pending" :
+//         console.log("Item is Pending")
+// break;        
+//     case "Packed" : 
+//         console.log("Item is Packed")
+// break;          
+//    case  "Shipped" :
+//        console.log("Item is Shipped")
+// break;  
+//     case "Delivered" :
+//         console.log("Item is Delivered")
+// break;      
+//      default:
+//         console.log("Unknown status.");
+// }
+// }
+
+// Item is Pending
+// Item is Packed
+// Item is Shipped
+// Item is Delivered
+
+
+
+         
