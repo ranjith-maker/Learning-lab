@@ -463,43 +463,4 @@
 
 
 
-// 1️⃣8️⃣ Order Tracking System (switch + loop)
-// Order status:
-// •	pending
-// •	packed
-// •	shipped
-// •	delivered
-// Switch-case for each status.
-
-
-
-// let statuses = ["Pending", "Packed","Shipped", "Delivered"];
-// for(let i = 0; i<statuses.length;i++){
-//    let status = (statuses[i])
-
-// switch(status){
-//     case "Pending" :
-//         console.log("Item is Pending")
-// break;        
-//     case "Packed" : 
-//         console.log("Item is Packed")
-// break;          
-//    case  "Shipped" :
-//        console.log("Item is Shipped")
-// break;  
-//     case "Delivered" :
-//         console.log("Item is Delivered")
-// break;      
-//      default:
-//         console.log("Unknown status.");
-// }
-// }
-
-// Item is Pending
-// Item is Packed
-// Item is Shipped
-// Item is Delivered
-
-
-
          
