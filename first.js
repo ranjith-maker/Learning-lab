@@ -452,14 +452,6 @@
 // break;
 // }
 
-// What is your password ?54531316541
-// Password should have 1 capital letter
-// What is your password ?kushediufkjBHeifd
-// Password should have 1 numerical character
-// What is your password ?A1fsghtyg
-// Password should have 1 Special character
-// What is your password ?"Nexus2"
-// Unlocked "Nexus2"
 
 
 
