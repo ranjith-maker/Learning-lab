@@ -434,24 +434,6 @@
 // Use continue for invalid attempts.
 
 
-// while(true){
-//     const ask = prompt("What is your password ?");
-//     if(ask.length < 6){
-//     alert("Password should have minimum 6 characters")
-//     continue;
-// }  if(!/[A-Z]/.test(ask)){
-//     alert("Password should have 1 capital letter")
-//     continue;
-// } if(!/[0-9]/.test(ask)){
-//     alert ("Password should have 1 numerical character")
-// continue;
-// } if(!/[!@#$%^&*(),.?":{}|<>]/.test(ask)){
-//     alert("Password should have 1 Special character")
-//     continue;
-// } console.log("Unlocked", ask);
-// break;
-// }
-
 
 
 
