@@ -417,13 +417,6 @@
 //     console.log("Succesfully withdrawn")
 // }
 
-// 1️⃣7️⃣ Password Strength Validator (while + continue)
-// Ask until:
-// •	min length 6
-// •	one number
-// •	one capital letter
-// •	one special char
-// Use continue for invalid attempts.
 
 
 
