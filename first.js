@@ -397,25 +397,8 @@
 // •	Or attempts exceed 3
 // •	Or user enters negative value
 
-// let balance = 0;
-// let attempt = 0;
 
-// while( balance <= 1000 && attempt <= 3){
-// let ask = prompt("how much you want?")
-//    attempt++;
-//     if(ask > 1000){
-//         console.log("Account is empty")
-//         break;
-//     } else if( attempt ===3 ){
-//         console.log("Attempt is Over")
-//         break;
-//     } if(ask <= 0){
-//         console.log("enter positive values")
-//         break;
-//     } 
-//      balance -= ask;
-//     console.log("Succesfully withdrawn")
-// }
+
 
 
 
