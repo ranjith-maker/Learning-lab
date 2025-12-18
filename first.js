@@ -389,13 +389,6 @@
 // 2️⃣0️⃣ Recursively remove all vowels from a string
 // Input: "javascript" → "jvscrpt"
 
-// -----
-
-// 1️⃣6️⃣ ATM Simulator (loop + condition + break)
-// Withdraw until:
-// •	Balance ends
-// •	Or attempts exceed 3
-// •	Or user enters negative value
 
 
 
