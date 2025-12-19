@@ -362,41 +362,14 @@
 // 30
 // -54
 // ---------
-//  LEVEL 4 seems DSA, will catch up later 
-// -----------
-// 🚀 LEVEL 5 — Hard / Product Company Style
-// 1️⃣6️⃣ ATM Simulator (loop + condition + break)
-// Withdraw until:
-// •	Balance ends
-// •	Or attempts exceed 3
-// •	Or user enters negative value
-// 1️⃣7️⃣ Password Strength Validator (while + continue)
-// Ask until:
-// •	min length 6
-// •	one number
-// •	one capital letter
-// •	one special char
-// Use continue for invalid attempts.
-// 1️⃣8️⃣ Order Tracking System (switch + loop)
-// Order status:
-// •	pending
-// •	packed
-// •	shipped
-// •	delivered
-// Switch-case for each status.
-// 1️⃣9️⃣ Print 1st 3 odd numbers WITHOUT modulo (%)
-// Product companies LOVE this.
-// 2️⃣0️⃣ Recursively remove all vowels from a string
-// Input: "javascript" → "jvscrpt"
 
 
 
+// How much ever the boxes you have it'll automatically come down when the screen hits 200px, as long as 100px it'll be right and then it'll overflow
 
-
-
-
-
-
+// With grid we use mostly align items and justify items not content, if we use justify-content : right,  then it'll take all small boxes in right 
+// Place items : center end  align and justify items shorthand 
+// To use align items and justify items, first give inside small boxes height and width so that you can move around it
 
 
 
