@@ -332,38 +332,6 @@
 // Your final amount 6912
 
 
-// 1️⃣1️⃣ Credit Score Evaluator (ternary operator)
-// If score > 750 → “Good” Else → “Bad” One-line ternary.
-
-// let mark = 500;
-// let score = mark < 750 ?  "Good" : "Bad"
-// console.log(score) Good
-
-
-
-// 1️⃣2️⃣ Detect First Negative Number (continue + break)
-// From an array, skip positive numbers.
-// Stop when you hit first negative.
-
-// let nos = [10,20,30,0,-54,-12,50,30]
-
-// for(let i = 0; i < nos.length; i++){
-//     if(nos[i] > 0 )
-//   {console.log(nos[i])
-//        continue;
-//   }
-//     if(nos[i] < 0) {
-// console.log(nos[i])
-// break;
-//  } 
-// } 
-// 10
-// 20
-// 30
-// -54
-// ---------
-
-
 
 // How much ever the boxes you have it'll automatically come down when the screen hits 200px, as long as 100px it'll be right and then it'll overflow
 
