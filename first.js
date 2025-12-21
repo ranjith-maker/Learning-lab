@@ -307,31 +307,13 @@
 // let amount = +prompt("Enter the total amount") 
 // let finalPrice;
 
-// switch(coupon) {
-//     case "SALE20" :
-//     finalPrice = amount - amount * 0.20;
-//     console.log(coupon,"Applied")
-// break;    
-//     case "SALE10" :
-//     finalPrice = amount - amount * 0.10;
-//     console.log(coupon, "Applied")
-// break;
-//     case  "WELCOME" :
-//     console.log(coupon, "Applied")    
-//     finalPrice = amount - 100;
-// break;
-// default :
-// console.log("Invalid coupon code")
-// finalPrice = amount ;   
-// }
-// console.log("Your final amount", finalPrice)
-
-// Enter the coupon code hereSALE20
-// Enter the total amount8640
-// SALE20 Applied
-// Your final amount 6912
 
 
+// frequency of every fruit (for in + object)
+// Given:
+// ["apple", "banana", "apple", "mango"]
+// Output:
+// { apple: 2, banana: 1, mango: 1 }
 
 // How much ever the boxes you have it'll automatically come down when the screen hits 200px, as long as 100px it'll be right and then it'll overflow
 
