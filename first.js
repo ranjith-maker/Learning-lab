@@ -322,5 +322,11 @@
 // To use align items and justify items, first give inside small boxes height and width so that you can move around it
 
 
+// What it is: Destructuring is a convenient JavaScript syntax that allows you to unpack values from arrays, or properties from objects, into distinct variables.
 
+// How it works here: In each iteration, the for...of loop provides a two-element array (e.g., [0, "Ravi"]). The destructuring assignment [index, name] immediately takes that array and assigns its elements to the declared variables:
+
+// The first element (the index, e.g., 0) is assigned to the variable index.
+
+// The second element (the value/name, e.g., "Ravi") is assigned to the variable name.
          
