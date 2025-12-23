@@ -205,28 +205,6 @@
 
 
 
-// I asked Ai this
-
-// for (const [index, name] of contacts.entries()) {
-
-//      explain me this one line, I often used for(const kay of conatcts) entries ok I understood because we are accessing the array's entries, what [ index,name ] is ?
-
-// Array Destructuring ([index, name])
-// This is the key to your question.
-
-// What it is: Destructuring is a convenient JavaScript syntax that allows you to unpack values from arrays, or properties from objects, into distinct variables.
-
-// How it works here: In each iteration, the for...of loop provides a two-element array (e.g., [0, "Ravi"]). The destructuring assignment [index, name] immediately takes that array and assigns its elements to the declared variables:
-
-// The first element (the index, e.g., 0) is assigned to the variable index.
-
-// The second element (the value/name, e.g., "Ravi") is assigned to the variable name.
-// ----------------------------------------------------------------------------------
-
-
-
-
-
 
 
 // 🚀 LEVEL 3 — Intermediate Product-Level
@@ -306,6 +284,34 @@
 // let coupon = prompt("Enter the coupon code here").toUpperCase();
 // let amount = +prompt("Enter the total amount") 
 // let finalPrice;
+
+
+// const usernames = ["ra", "ro hit", "Rohan", "aj", "mike", "sam", "anbu"];
+
+// let i = 0;
+
+// while (i < usernames.length) {
+//     const user = usernames[i];
+//     i++;
+
+//     // 1) Reject if it contains spaces
+//     if (user.includes(" ")) {
+//         continue;
+//     }
+
+//     // 2) Reject if shorter than 3 characters
+//     if (user.length < 3) {
+//         continue;
+//     }
+
+//     // 3) Reject if not all lowercase
+//     if (user !== user.toLowerCase()) {
+//         continue;
+//     }
+
+//     // If it passed all checks, print it
+//     console.log("Valid Username:", user);
+// }
 
 
 
