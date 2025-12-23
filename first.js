@@ -336,3 +336,30 @@
 
 // The second element (the value/name, e.g., "Ravi") is assigned to the variable name.
          
+
+
+// 1. Basic Object Access
+// Create an object student with properties name, age, score. Print the score using both dot and bracket notation.
+// let stu= {
+// name : "Rohith",
+// age : 55,
+// score: 100
+// }
+// console.log(stu.score) ---> 100
+// console.log(stu["score"]) ---> 100
+// 2. Modify Properties Given:
+// const emp = { name: "Aman", salary: 40000 };
+// Change the salary to 55000 and print final object.
+// emp.salary = 55000
+// console.log(emp) --> { name: 'Aman', salary: 55000 }
+// 3. Delete a Property --> Delete the property age from:
+// const user = { name: "Rohit", age: 25, city: "Mumbai" };
+// delete(user.age)
+// console.log(user) ---> { name: 'Rohit', city: 'Mumbai' }
+// 4. Access Key With Space
+// Access "account balance" from this object:
+// const bank = {
+// name: "Raj",
+// "account balance": 5000
+// };
+// console.log(bank["account balance"]) ---> 5000
