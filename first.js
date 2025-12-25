@@ -101,38 +101,6 @@
 // Luxury item detected!
 // 4448
 
-// 6️⃣ Instagram Username Validator (while + continue)
-// Keep asking user for a username until:
-// •	No spaces
-// •	At least 3 characters
-// •	All lowercase
-// Use continue to reject bad inputs.
-
-// while(true){
-//     const ask = prompt("What's your username ?")
-//     if(ask.includes(" ")){
-//         alert(" NO spaces") 
-//     continue;
-//     } 
-//     if(ask.length < 3  ){
-//         alert(" Must be three characters ")
-//     continue; 
-//     }
-//     if(ask != ask.toLowerCase() ){
-//         alert("Must be in lowercases")
-//         continue; 
-//     } console.log("successful attempt")
-//     break;
-// }
-// What's your username ?FGHD ZDFHZDF
-//  NO spaces
-// What's your username ?FDGD
-// Must be in lowercases
-// What's your username ?as
-//  Must be three characters 
-// What's your username ?ass
-// successful attempt
-
 
 // IF method based on the given array, it gives the valid ones
 
@@ -337,29 +305,33 @@
 // The second element (the value/name, e.g., "Ravi") is assigned to the variable name.
          
 
-
-// 1. Basic Object Access
-// Create an object student with properties name, age, score. Print the score using both dot and bracket notation.
-// let stu= {
-// name : "Rohith",
-// age : 55,
-// score: 100
+//writing in single line
+// const arr = [10,20,30,40,50,60];
+// const result = arr.reduce((acc, val)=> acc + val ,0);
+// console.log(result); --> 210
+// Real life scenerio question . let's say your you got all these fruits names in the backend
+// how do you know how many times a particular fruit name has come
+// final result will look like an object it means
+// result = {
+// orange : 3
 // }
-// console.log(stu.score) ---> 100
-// console.log(stu["score"]) ---> 100
-// 2. Modify Properties Given:
-// const emp = { name: "Aman", salary: 40000 };
-// Change the salary to 55000 and print final object.
-// emp.salary = 55000
-// console.log(emp) --> { name: 'Aman', salary: 55000 }
-// 3. Delete a Property --> Delete the property age from:
-// const user = { name: "Rohit", age: 25, city: "Mumbai" };
-// delete(user.age)
-// console.log(user) ---> { name: 'Rohit', city: 'Mumbai' }
-// 4. Access Key With Space
-// Access "account balance" from this object:
-// const bank = {
-// name: "Raj",
-// "account balance": 5000
-// };
-// console.log(bank["account balance"]) ---> 5000
+// let fruits = ["Orange", "Apple", "Pine","Apple","Orange"
+// ,"Mango", "Pine", "Banana", "Banana", "Orange", "Apple" ];
+// let result = fruits.reduce((acc, val) => {
+// if(acc.hasOwnProperty(val))
+// acc[val]++;
+// else
+// acc[val] = 1;
+// return acc;
+// },{})
+// console.log(result)
+// { Orange: 3, Apple: 3, Pine: 2, Mango: 1, Banana: 2 }
+
+
+
+
+
+
+
+
+
