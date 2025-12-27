@@ -65,19 +65,6 @@
 //  }
 // }
 
-// 4️⃣ Count first 3 even numbers (for + break)
-// Print only first 3 even numbers between 1–100.
-
-// let count = 0;
-// for(let i = 1; i<100; i++){
-//     if(i%2 === 0 ){       
-//         console.log(i)
-//     count++;
-// } if(count === 3) {
-//     break;
-// } 
-// } 2 4 6
-
 
 // 5️⃣ Amazon Cart Total (forEach + if)
 // Given cart prices:
@@ -212,34 +199,6 @@
 // let finalPrice;
 
 
-// const usernames = ["ra", "ro hit", "Rohan", "aj", "mike", "sam", "anbu"];
-
-// let i = 0;
-
-// while (i < usernames.length) {
-//     const user = usernames[i];
-//     i++;
-
-//     // 1) Reject if it contains spaces
-//     if (user.includes(" ")) {
-//         continue;
-//     }
-
-//     // 2) Reject if shorter than 3 characters
-//     if (user.length < 3) {
-//         continue;
-//     }
-
-//     // 3) Reject if not all lowercase
-//     if (user !== user.toLowerCase()) {
-//         continue;
-//     }
-
-//     // If it passed all checks, print it
-//     console.log("Valid Username:", user);
-// }
-
-
 //UPI Payment Attempts (while)
 // User enters payment PIN. Run at least once.
 // Stop when: Correct PIN	OR  attempts reached 5
@@ -260,6 +219,8 @@
 // }
 // What's your password ?Nexus
 // Correct Pin
-// ------------------------
-
+// Accessing by CSS Selectors:
+// If I want to select a single element by query selector
+// const id = document.querySelector("#first") //-- we are accessing by CSS selector () in the bracket we can write anything with in Idnanme , classname or tag name, we will initiate it with "#"hashtag id name
+// id.innerHTML = "Hello Money"; // - up until it was Hello Coder Army now it is Hello Money, I can access it and manipulate it
 
