@@ -146,81 +146,17 @@
 // ________________________________________
 
 
+// So:
 
-// 9️⃣ Count frequency of every fruit (for in + object)
-// Given:
-// ["apple", "banana", "apple", "mango"]
-// Output:
-// { apple: 2, banana: 1, mango: 1 }
+// #card { flex-direction: column; }
+// → affects only the direct children of #card
 
-// let fruits = ["apple", "banana", "apple", "mango"];
+// .btns { display: flex; }
+// → affects only the buttons inside .btns
+// These two flexboxes are independent.
 
-// let grow = Object.groupBy(fruits, tree => tree)
-// let result = {};
-// for(let key in grow){
-//     result[key] = grow[key].length;
-// }
-// console.log(result)
-// { apple: 2, banana: 1, mango: 1 }
-
-// FOR Loop
-
-// let fruits = ["apple", "banana", "apple", "mango"];
-
-// let freq = {};
-// for(let i =0; i<fruits.length; i++){
-//     const fal = fruits[i]
-//     if(freq[fal]){
-//         freq[fal] += 1;
-// } else{
-//     freq[fal] = 1; 
-// } 
-//     }
-// console.log(freq) --> { apple: 2, banana: 1, mango: 1 }
-
-
-// 🔟 Flipkart Discount Engine (if-else + switch)
-// Input coupon code:
-// •	SALE10 → 10%
-// •	SALE20 → 20%
-// •	WELCOME → ₹100 off
-// •	INVALID → show message
-// Use switch case.
-
-
-// 🔟 Flipkart Discount Engine (if-else + switch)
-// Input coupon code:
-// •	SALE10 → 10%      SALE20 → 20%
-// •	WELCOME → ₹100 off  INVALID → show message
-// Use switch case.
-
-// let coupon = prompt("Enter the coupon code here").toUpperCase();
-// let amount = +prompt("Enter the total amount") 
-// let finalPrice;
-
-
-//UPI Payment Attempts (while)
-// User enters payment PIN. Run at least once.
-// Stop when: Correct PIN	OR  attempts reached 5
-
-// let pass = "Nexus";
-// let count = 0;
-
-// while(count < 5){
-//  let pin = prompt("What's your password ?")
-//     count++;
-//     if(pin === pass){
-//         console.log("Correct Pin")
-//         break;
-//     }
-//     else if (count === 5){
-//     console.log("Max times reached")
-//     }
-// }
-// What's your password ?Nexus
-// Correct Pin
-// Accessing by CSS Selectors:
-// If I want to select a single element by query selector
-// const id = document.querySelector("#first") //-- we are accessing by CSS selector () in the bracket we can write anything with in Idnanme , classname or tag name, we will initiate it with "#"hashtag id name
-// id.innerHTML = "Hello Money"; // - up until it was Hello Coder Army now it is Hello Money, I can access it and manipulate it
-
+// All display layout properties affect the child only 
+// Amazing insight, we know that buttons'll come inside card,not oly that but img, h1s, button, all the elements we add 
+// we made  for card as we want elements to come one by one, interesting thisng is we'ev 2 buttons and we want both the buttons to come side by side, flex-direction: column;
+// it isn't possible, that's when we got to know this, flex-direction: column; only affects the direct child not the grandchild thts why we made a grandchild by putting a buttons in a div    
+// now ok!
