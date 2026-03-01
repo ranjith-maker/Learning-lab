@@ -160,3 +160,78 @@
 // we made  for card as we want elements to come one by one, interesting thisng is we'ev 2 buttons and we want both the buttons to come side by side, flex-direction: column;
 // it isn't possible, that's when we got to know this, flex-direction: column; only affects the direct child not the grandchild thts why we made a grandchild by putting a buttons in a div    
 // now ok!
+
+
+
+
+//Maps in JS
+
+
+const mymap = new Map()
+
+const key1 = "this is the one"
+key2 = {}; 
+key3 =  function() {}
+
+//   mymap.size
+// console.log(ok);
+
+
+mymap.set(key1, "this is a string")
+mymap.set(key2, "this is an object")
+mymap.set(key3, "this is a function")
+
+// console.log(mymap);
+
+// Map(3) {
+//   'this is the one' => 'this is a string',
+//   {} => 'this is an object',
+//   [Function: key3] => 'this is a function'
+// }
+
+// Getting the values from the map
+//let val1 = mymap.get(key3)
+//console.log(val1); //this is a function
+
+//Getting the size of the map
+//console.log(mymap.size); 3 
+
+
+// Getting the all keys of map
+// let ok = mymap.keys() 
+// console.log(ok); [Map Iterator] { 'this is the one', {}, [Function: key3] }
+
+//Getting all values of Map
+// let ok = mymap.values()
+// console.log(ok);
+// [Map Iterator] {
+//   'this is a string',
+//   'this is an object',
+//   'this is a function'
+// }
+
+
+//Getting all the entries of map
+
+// for(let [key,val] of mymap){
+//     console.log( key,val);
+
+
+// }
+// this is the one this is a string
+// {} this is an object
+// [Function: key3] this is a function
+
+
+
+
+
+
+
+
+
+
+
+
+
+
